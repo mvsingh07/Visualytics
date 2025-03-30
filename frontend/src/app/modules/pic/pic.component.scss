@@ -1,0 +1,79 @@
+
+   
+  
+  .heading {
+    // background-color:aliceblue;
+    text-align: center;
+    font-size: x-large;
+    color: rgb(31, 67, 122);
+    margin-top: 10px;
+    padding: 10px;
+    height: 30px;
+    /* Center text horizontally and vertically */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Change font style */
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+ 
+  }
+
+
+  // .heading:hover {
+  //   background-color:rgb(115, 152, 118);
+  //   color:white;
+    
+  // }
+  
+
+  // .timer{
+  //   height: 60px;
+  //   // background-color: #138808;
+  //   align-items: center;
+  //   margin-top: 10px;
+  // }
+
+  
+  .table-boundaries th {
+    // background-color: rgb(25, 54, 98  ); /* Dark heading background */
+    color: #1a3344; /* Heading text color */
+    font-weight: bold;
+    
+  }
+  
+  // th, td {
+  //   padding: 12px;
+  //   text-align: left;
+
+  //   border: 1px solid #eee;
+ 
+  // }
+  
+  // th {
+  //   position: sticky;
+  //   top: 0;
+  //   background-color: #39bbd2;
+  //   color: #fff;
+  //   font-weight: bold;
+  //   z-index: 1;
+  // }
+  // td {
+  //   color: #333;
+  //   font-weight: bold;
+  
+  // }
+  
+  // tr:nth-child(odd) td {
+  //   background-color: white
+  // }
+  
+  // tr:nth-child(even) td {
+  //   background-color: aliceblue
+  // }
+  
+
+ body{
+  zoom:0.85;
+ }
+  

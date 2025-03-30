@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    
+    <div class="container">
+  
+
+      <div class="form-container">
+      
+          <div class="image-container">
+             <img src="../../assets/img-01.png" alt="Sample Image">
+          </div>
+          
+      <div class="separator"></div>
+    
+        <form
+          class="common-form"
+
+          [formGroup]="form"
+          #Login="ngForm"
+          (ngSubmit)="login(Login.value)">
+          
+          <span class="text">Member Login</span>
+
+          <!-- Email input -->
+          <div class="form-outline">
+            <br />
+            <br />
+            <br />
+         
+            <i class="fa fa-envelope icon"></i>
+            <input
+              type="email"
+              id="email"
+              class="form-control"
+              formControlName="email"
+              placeholder="Email address"
+            />
+            <div
+              *ngIf="
+                form.get('email')?.invalid &&
+                (form.get('email')?.dirty && form.get('email')?.touched)
+              "
+              class="text-danger">
+              <div *ngIf="form.get('email')?.hasError('required')">
+                Email is required.
+              </div>
+              <div
+                *ngIf="
+                  form.get('email')?.hasError('invalidFormat') &&
+                  form.get('email')?.touched"
+              >
+                Please enter a valid email address.
+              </div>
+            </div>
+          </div>
+
+          <!-- Password input -->
+          <div class="form-outline password-container">
+            <i class="fa fa-key icon"></i>
+            <input
+              type="{{ passwordVisible ? 'text' : 'password' }}"
+              id="password"
+              class="form-control"
+              formControlName="password"
+              placeholder="Password"
+            />
+
+            <i class="fa eye-icon"
+              [ngClass]="{ 'fa-eye-slash': !passwordVisible, 'fa-eye': passwordVisible }"
+              (click)="togglePasswordVisibility()"></i>
+            <div
+              *ngIf="
+                form.get('password')?.invalid &&
+                (form.get('password')?.dirty && form.get('password')?.touched)"
+              class="text-danger">
+              <div *ngIf="form.get('password')?.errors?.['required']">
+                Password is required.
+              </div>
+              <div
+                *ngIf="
+                  form.get('password')?.errors?.['invalidPassword']"
+              >
+                Invalid password. Please try again.
+              </div>
+            </div>
+          </div>
+
+          
+
+          <!-- 2 column grid layout for inline styling -->
+          <div class="row mb-4">
+            <div class="col d-flex justify-content-center">
+              <!-- Checkbox -->
+              <div class="form-check"></div>
+            </div>
+          
+           <br>
+           
+
+          <!-- Submit button -->
+          <button type="submit" class="btn btn-primary btn-block">Login</button><br />
+          <br>
+          <div class="col">
+            <!-- Simple link -->
+           &nbsp;&nbsp;&nbsp; <a class="form-check-label" href="/email-provider">Forgot password?</a><br/>
+          </div>
+        </div>
+        <br/>
+        </form>
+      
+        <br />
+      </div>
+    </div>
+  </body>
+</html>

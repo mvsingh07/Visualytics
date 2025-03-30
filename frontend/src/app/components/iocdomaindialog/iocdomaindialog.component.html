@@ -1,0 +1,14 @@
+<div class="iocdomain-container">
+    <h2>IocDomain Data</h2>
+    <ul>
+      <li *ngFor="let iocdomain of paginatediocdomain" class="iocdomain-item">{{ iocdomain }}</li>
+    </ul>
+
+    <mat-paginator [length]="iocdomain.length"
+    [pageSize]="pageSize"
+    [pageSizeOptions]="[10, 15, 20]"
+    (page)="handlePageEvent($event)">
+    </mat-paginator>
+
+  </div>
+  

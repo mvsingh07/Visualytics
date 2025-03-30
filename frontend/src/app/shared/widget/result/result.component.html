@@ -1,0 +1,46 @@
+ <div class="container">
+  
+ <table class="elegant-table">
+    <tr>
+      <th colspan="2">STATUS REPORT</th>
+    </tr> 
+
+    <tr>
+      <td>Total Files</td>
+      <td>{{ totalFiles }}</td>
+    </tr>
+  
+      <tr>
+        <td>Files Processed Successfully</td>
+        <td>{{ successFiles }}</td>
+      </tr>
+   
+    <tr>
+      <td>Success Rate</td>
+      <td>{{successRate.toFixed(2)}}%</td>
+    </tr>
+    <tr>
+      <td>File Processed Per Day</td>
+      <td>{{successFilesInRange}}</td>
+    </tr>
+    <tr>
+      <td>Data Processed Per Day</td>
+      <td>{{totalVolumeInRange}} MegaBytes</td>
+    </tr>
+
+    <!-- <tr>
+      <td>Total Volume</td>
+      <td>{{ totalVolumeInBytes | fileSize }}</td>
+    </tr>  -->
+  </table> 
+
+</div>
+ 
+
+
+
+
+
+
+
+  

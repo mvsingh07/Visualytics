@@ -1,0 +1,307 @@
+<body>
+
+ 
+  <!-- <mat-card class="heading1">
+    FILE STATISTICS
+  </mat-card> -->
+<div class="main">
+<div style="overflow-x:scroll;">
+
+
+<div class="mat-elevation-z8" id="tableToExport">
+<table mat-table [dataSource]="dataSource" class="table-boundaries" matSort>
+
+<!-- // UNIQUE_ID Column // -->
+<ng-container matColumnDef="UNIQUE_ID">
+ <th mat-header-cell *matHeaderCellDef>
+  <mat-form-field class="large-input">
+  <mat-label>UNIQUE ID</mat-label>
+  <input matInput (keyup)="applyFilter('UNIQUE_ID', fileTypeInput.value)" #fileTypeInput placeholder="Enter UNIQUE_ID">
+</mat-form-field> </th>
+ <td mat-cell *matCellDef="let element"> {{element.UNIQUE_ID}} </td>
+</ng-container>
+
+
+
+
+<!-- // FILE_NAME Column // -->
+<ng-container matColumnDef="FILE_NAME">
+ <th mat-header-cell *matHeaderCellDef> <mat-form-field>
+  <mat-label>FILE NAME</mat-label>
+  <input matInput (keyup)="applyFilter('FILE_NAME', fileTypeInput.value)" #fileTypeInput placeholder="Enter FILENAME">
+</mat-form-field> </th>
+ <td mat-cell *matCellDef="let element"> {{element.FILE_NAME}} </td>
+</ng-container>
+
+<!--FILE-SIZE COLUMN  -->
+<ng-container matColumnDef="FILE_SIZE">
+ <th mat-header-cell *matHeaderCellDef> <mat-form-field>
+  <mat-label>FILE SIZE (MB)</mat-label>
+  <input matInput (keyup)="applyFilter('FILE_SIZE', fileTypeInput.value)" #fileTypeInput placeholder="Enter Time Hours">
+</mat-form-field>  </th>
+<td mat-cell *matCellDef="let element"> {{ element.FILE_SIZE / 1000000 | number:'1.2-2' }} </td>
+</ng-container>
+<ng-container matColumnDef="FILE_TYPE">
+  <th mat-header-cell *matHeaderCellDef>
+    <mat-form-field appearance="fill">
+      <mat-label>INPUT FILE TYPE</mat-label>
+      <mat-select #fileTypeSelect (selectionChange)="applyFilter('FILE_TYPE', fileTypeSelect.value)" panelClass="custom-dropdown-panel">
+        <mat-option value="">All</mat-option>
+        <!-- Add options for each FILE_TYPE value -->
+        <mat-option *ngFor="let fileType of uniqueFileTypes" [value]="fileType">{{ fileType }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </th>
+  <td mat-cell *matCellDef="let element"> {{element.FILE_TYPE}} </td>
+</ng-container>
+
+
+<!-- FILE_MD5SUM -->
+<ng-container matColumnDef="FILE_MD5SUM">
+ <th mat-header-cell *matHeaderCellDef><mat-form-field>
+  <mat-label>INPUT FILE MD5</mat-label>
+  <input matInput (keyup)="applyFilter('FILE_MD5SUM', fileTypeInput.value)" #fileTypeInput placeholder="Enter FILE_MD5SUM">
+</mat-form-field> </th>
+ <td mat-cell *matCellDef="let element"> {{element.FILE_MD5SUM}} </td>
+</ng-container>
+
+<!----FILEPATH-->
+<ng-container matColumnDef="FILEPATH">
+  <th mat-header-cell *matHeaderCellDef>
+    <mat-form-field>
+      <mat-label>FILEPATH</mat-label>
+      <input matInput (keyup)="applyFilter('FILEPATH', fileTypeInput.value)" #fileTypeInput placeholder="DOWNLOAD">
+    </mat-form-field>
+  </th>
+  <td mat-cell *matCellDef="let element">
+    <!-- {{element.FILEPATH}} -->
+     <ng-container *ngIf="isTransformed(element.STATUS)">
+    <button  mat-button (click)="downloadFile(element.FILEPATH)">Download</button>
+  </ng-container>
+  </td>
+</ng-container>
+
+
+<!-- // MIME_TYPE // -->
+<ng-container matColumnDef="MIME_TYPE">
+ <th mat-header-cell *matHeaderCellDef><mat-form-field>
+  <mat-label>MIME TYPE</mat-label>
+  <input matInput (keyup)="applyFilter('MIME_TYPE', fileTypeInput.value)" #fileTypeInput placeholder="Enter MIME_TYPE">
+</mat-form-field> </th>
+ <td mat-cell *matCellDef="let element"> {{element.MIME_TYPE}} </td>
+</ng-container>
+
+<!-- // TRANS_FILE_NAME// -->
+<ng-container matColumnDef="TRANS_FILE_NAME">
+ <th mat-header-cell *matHeaderCellDef> <mat-form-field>
+  <mat-label>OUTPUT FILE NAME</mat-label>
+  <input matInput (keyup)="applyFilter('TRANS_FILE_NAME', fileTypeInput.value)" #fileTypeInput placeholder="Enter TRANS_FILE_NAME">
+</mat-form-field> </th>
+ <td mat-cell *matCellDef="let element"> {{element.TRANS_FILE_NAME}} </td>
+</ng-container>
+
+<!-- <--------Not working propelry----->change value in database
+<!-- //TRANSFORM_TIMESTAMP// -->
+<ng-container matColumnDef="TRANSFORM_TIMESTAMP">
+ <th mat-header-cell *matHeaderCellDef><mat-form-field>
+  <mat-label>TRANSFORM TIMESTAMP</mat-label>
+  <input matInput (keyup)="applyFilter('TRANSFORM_TIMESTAMP', fileTypeInput.value)" #fileTypeInput placeholder="Enter TRANSFORM_TIMESTAMP">
+</mat-form-field> </th>
+ <td mat-cell *matCellDef="let element"> {{element.TRANSFORM_TIMESTAMP}} </td>
+</ng-container>
+
+<!-- PROCESSING-TIME -->
+<ng-container matColumnDef="PROCESSING_TIME">
+ <th mat-header-cell *matHeaderCellDef><mat-form-field>
+  <mat-label>PROCESSING TIME (Seconds)</mat-label>
+  <input matInput (keyup)="applyFilter('PROCESSING_TIME', fileTypeInput.value)" #fileTypeInput placeholder="Enter PROCESSING-TIME">
+</mat-form-field> </th>
+ <td mat-cell *matCellDef="let element"> {{element.PROCESSING_TIME/1000}} </td>
+</ng-container>
+
+<!-- // TRANS_FILE_TYPE // -->
+<ng-container  matColumnDef="TRANS_FILE_TYPE">
+ <th mat-header-cell *matHeaderCellDef>   <mat-form-field>
+  <mat-label>OUTPUT FILE TYPE</mat-label>
+  <mat-select  #fileTypeSelect (selectionChange)="applyFilter('TRANS_FILE_TYPE', fileTypeSelect.value)">
+    <mat-option value="">All</mat-option>
+    <!-- Add options for each FILE_TYPE value -->
+    <mat-option  *ngFor="let TransFileType of uniqueTransFileTypes" [value]="TransFileType">{{ TransFileType }}</mat-option>
+  </mat-select>
+</mat-form-field> </th>
+ <td mat-cell *matCellDef="let element"> {{element.TRANS_FILE_TYPE}} </td>
+</ng-container>
+
+<!-- // TRANS_FILE-MD5 // -->
+<ng-container matColumnDef="TRANS_FILE_MD5">
+ <th mat-header-cell *matHeaderCellDef> <mat-form-field>
+  <mat-label>OUTPUT FILE MD5</mat-label>
+  <input matInput (keyup)="applyFilter('TRANS_FILE_MD5', fileTypeInput.value)" #fileTypeInput placeholder="Enter TRANS_FILE_MD5">
+</mat-form-field> </th>
+ <td mat-cell *matCellDef="let element"> {{element.TRANS_FILE_MD5}} </td>
+</ng-container>
+
+<!-- // IOCURL // -->
+<!-- <ng-container matColumnDef="IOCURL">
+ <th mat-header-cell *matHeaderCellDef><mat-form-field>
+  <mat-label>IOC URL</mat-label>
+  <input matInput (keyup)="applyFilter('IOCURL', fileTypeInput.value)" #fileTypeInput placeholder="Enter IOCURL">
+</mat-form-field> </th>
+ <td mat-cell *matCellDef="let element"> {{element.IOCURL}} </td>
+</ng-container> -->
+
+
+<!-- 
+<ng-container matColumnDef="IOCURL">
+    
+  <th mat-header-cell *matHeaderCellDef><mat-form-field>
+    <mat-label>IOC URL</mat-label>
+    <input matInput (keyup)="applyFilter('IOCURL', fileTypeInput.value)" #fileTypeInput placeholder="Enter IOCURL">
+  </mat-form-field> </th>
+   <td mat-cell *matCellDef="let element" >
+    <button mat-button (click)="showIocurl(element.IOCURL)"> View IOC URL </button>
+   </td>
+</ng-container>  -->
+<ng-container matColumnDef="IOCURL">
+  <th mat-header-cell *matHeaderCellDef>
+    <mat-form-field>
+      <mat-label>IOC URL</mat-label>
+      <input matInput (keyup)="applyFilter('IOCURL', fileTypeInput.value)" #fileTypeInput placeholder="Enter IOCURL">
+    </mat-form-field>
+  </th>
+  <td mat-cell *matCellDef="let element">
+    <ng-container *ngIf="isValidIocurl(element.IOCURL)">
+      <button mat-button (click)="showIocurl(element.IOCURL)"> View IOC URL </button>
+    </ng-container>
+    
+  </td>
+</ng-container>
+
+
+
+ <!-- IoCIP container -->
+ <ng-container matColumnDef="IOCIP">
+   <th mat-header-cell *matHeaderCellDef> <mat-form-field>
+    <mat-label>IOC IP</mat-label>
+    <input matInput (keyup)="applyFilter('IOCIP', fileTypeInput.value)" #fileTypeInput placeholder="Enter IOCIP">
+  </mat-form-field> </th>
+   <td mat-cell *matCellDef="let element">
+      <ng-container *ngIf="isValidIocip(element.IOCIP)">
+       <button mat-button (click)="showIocip(element.IOCIP)"> View IOCIP </button> 
+      </ng-container>
+   </td>
+ </ng-container>
+
+ <!-- IocDomain -->
+ <ng-container matColumnDef="IOCDOMAIN">
+   <th mat-header-cell *matHeaderCellDef> <mat-form-field>
+    <mat-label>IOC DOMAIN</mat-label>
+    <input matInput (keyup)="applyFilter('IOCDOMAIN', fileTypeInput.value)" #fileTypeInput placeholder="Enter IOCDOMAIN">
+  </mat-form-field> </th>
+   <td mat-cell *matCellDef="let element"> 
+      <ng-container *ngIf="isValidIocdomain(element.IOCDOMAIN)">
+       <button mat-button (click)="showIocdomain(element.IOCDOMAIN)"> View IocDomain </button>
+      </ng-container>
+  </td>
+ </ng-container>
+ 
+ <!--IocEmail-->
+ <ng-container matColumnDef="IOCEMAIL">
+   <th mat-header-cell *matHeaderCellDef class="largerx-input"><mat-form-field >
+    <mat-label>IOC EMAIL</mat-label>
+    <input matInput (keyup)="applyFilter('IOCEMAIL', fileTypeInput.value)" #fileTypeInput placeholder="Enter IOCEMAIL">
+  </mat-form-field></th>
+   <td mat-cell *matCellDef="let element"> 
+    
+    <ng-container *ngIf="isValidIocemail(element.IOCEMAIL)"> 
+     <button mat-button (click)="showIocemail(element.IOCEMAIL)"> View IOCEMAIL </button>  
+    </ng-container>
+  
+  </td>
+ 
+ 
+  </ng-container>
+ 
+ <!--MACRO-ANALYSIS-RESULT--->
+ <ng-container matColumnDef="MACRORESULT">
+  <th mat-header-cell *matHeaderCellDef><mat-form-field class="largerx-input">
+   <mat-label>MACRO-ANALYSIS-RESULT</mat-label>
+   <input matInput (keyup)="applyFilter('MACRORESULT', fileTypeInput.value)" #fileTypeInput placeholder="Enter MACRO-ANALYSIS-RESULT">
+ </mat-form-field></th>
+  <td mat-cell *matCellDef="let element">
+    <ng-container *ngIf="isValidmacro_analysis_result(element.MACRORESULT)">
+     <button mat-button (click)="showMacroResults(element.MACRORESULT)"> MACRO RESULTS </button>
+    </ng-container>
+    
+    </td>
+</ng-container>
+
+
+<!---MACROS-blob-->
+ <ng-container matColumnDef="MACROS">
+  <th mat-header-cell *matHeaderCellDef><mat-form-field>
+    <mat-label>MACROS</mat-label>
+    <input matInput (keyup)="applyFilter('MACROS', fileTypeInput.value)" #fileTypeInput placeholder="Enter MACROS">
+  </mat-form-field> </th>
+   <td mat-cell *matCellDef="let element">
+    <ng-container *ngIf="isValidmacros(element.MACROS)">
+       <button mat-button (click)="showMacroData(element.MACROS)"> MACROS </button>
+    </ng-container>
+   </td>
+</ng-container> 
+
+
+ <!-- Yara-Results
+ <ng-container matColumnDef="YARA_RESULTSS">
+  <th mat-header-cell *matHeaderCellDef><mat-form-field class="larger-input">
+   <mat-label>YARA RESULTS</mat-label>
+   <input matInput (keyup)="applyFilter('YARA_RESULTSS', fileTypeInput.value)" #fileTypeInput placeholder="Enter YARA RESULTS">
+ </mat-form-field></th>
+  <td mat-cell *matCellDef="let element"> {{element.YARA_RESULTSS}} </td>
+</ng-container> -->
+
+<ng-container matColumnDef="YARA_RESULTS">
+  <th mat-header-cell *matHeaderCellDef><mat-form-field>
+    <mat-label>YARA_RESULTS</mat-label>
+    <input matInput (keyup)="applyFilter('YARA_RESULTS', fileTypeInput.value)" #fileTypeInput placeholder="Enter YARA_RESULTS">
+  </mat-form-field> </th>
+   <td mat-cell *matCellDef="let element">
+    <ng-container *ngIf="isValidYARA_RESULTS(element.YARA_RESULTS)">
+       <button mat-button (click)="showYaraData(element.YARA_RESULTS)"> YARA_RESULTS </button>
+    </ng-container>
+   </td>
+</ng-container> 
+<ng-container matColumnDef="STATUS">
+  <th mat-header-cell *matHeaderCellDef>   
+  <mat-form-field >
+   <mat-label>STATUS</mat-label>
+   <mat-select  class="custom-dropdown" #statusSelect (selectionChange)="applyFilter('STATUS', statusSelect.value)">
+     <mat-option value="">All</mat-option>
+     <!-- Add options for each FILE_TYPE value -->
+     <mat-option *ngFor="let status of uniqueStatusTypes" [value]="status">{{ status }}</mat-option>
+   </mat-select>
+ </mat-form-field></th>
+  
+  <td mat-cell *matCellDef="let element"> {{element.STATUS}} </td>
+</ng-container>
+
+ <!--Yara-Results-->
+ <ng-container matColumnDef="INVOKEHTTPMESSAGE">
+  <th mat-header-cell *matHeaderCellDef><mat-form-field class="larger-input">
+   <mat-label>STATUS MESSAGE</mat-label>
+   <input matInput (keyup)="applyFilter('INVOKEHTTPMESSAGE', fileTypeInput.value)" #fileTypeInput placeholder="Enter message">
+ </mat-form-field></th>
+  <td mat-cell *matCellDef="let element"> {{element.INVOKEHTTPMESSAGE}} </td>
+</ng-container>
+ <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+ <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<mat-paginator [pageSizeOptions]="pageSizeOptions"></mat-paginator>
+
+</div>
+</div>
+</div>
+</body>
+
+

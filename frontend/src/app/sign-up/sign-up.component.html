@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+ 
+<div class="container">
+  
+    <div class="form-container">
+    
+         
+      <form [formGroup]="form" (ngSubmit)="validateForm()">
+       
+        <h1> Create User Account</h1>
+
+
+          <label>Name</label>
+          <input type="text" class="input" formControlName="name" />
+        
+          <label>Email</label>
+          <input type="email" class="input" formControlName="email" />
+       
+        <div *ngIf="form.get('email')?.hasError('required') && form.get('email')?.touched">
+          Email is required.
+        </div>
+
+        <div *ngIf="form.get('email')?.hasError('invalidFormat') && form.get('email')?.touched">
+          Invalid email format.
+        </div>
+        
+        <div class="password-input">
+          <label>Password</label>
+          <input
+            type="password"
+            formControlName="password"
+            class="input"
+            [type]="showPassword ? 'text' : 'password'"
+          />
+          <span
+            class="password-toggle"
+            (click)="togglePasswordVisibility()"
+            [class.active]="showPassword"
+          >
+            <i class="fa" [ngClass]="showPassword ? 'fa-eye ' : 'fa-eye-slash '"></i>
+          </span>
+        </div>
+        
+        <div *ngIf="form.get('password')?.hasError('required') && form.get('password')?.touched">
+          Password is required.
+        </div>
+
+        <div *ngIf="form.get('password')?.hasError('pattern') && form.get('password')?.touched">
+          Password must contain at least one uppercase letter, one digit, and one special character (@, $, !, %, *, #, ?, &).
+          Minimum length: 8 characters.
+        </div>
+
+        <div class="password-input">
+         
+          <label>Repeat Password</label>
+
+          <input         
+            type="password"
+            formControlName="pwd"
+            class="input"
+            [type]="showRepeatPassword ? 'text' : 'password'"
+          />
+          
+          <span
+            class="password-toggle"
+            (click)="toggleRepeatPasswordVisibility()"
+            [class.active]="showRepeatPassword"
+          >
+            <i class="fa" [ngClass]="showRepeatPassword ? 'fa-eye' : 'fa-eye-slash'"></i>
+          </span>
+        </div>
+    
+        <div *ngIf="form.get('pwd')?.hasError('required') && form.get('pwd')?.touched">
+          Repeat password is required.
+        </div>
+        <div *ngIf="form.hasError('passwordMismatch') && form.get('pwd')?.touched">
+          Passwords do not match.
+        </div>
+
+        <button type="submit" class="submit" [disabled]="form.invalid">Register</button><br>
+        <!-- <button type="button" name="btn" id="btn" class="btnl" (click)="goto()">Back to Login Page</button> -->
+        
+      </form>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="image-container">
+      <!-- Add an image here -->
+      <img src="../../assets/signup.jpeg" alt="Your Image" />
+    </div>
+  </div>
+
+</body>
+</html>

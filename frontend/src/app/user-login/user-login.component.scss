@@ -1,0 +1,210 @@
+/* styles.css */
+/* Remove any margin and padding to ensure the form is centered */
+html,body {
+  margin: 0;
+  padding: 0;
+ // overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   height: 100vh;
+ // background-image: url('/assets/');
+  // background-size: cover;
+  // background-position: center;
+  // background-repeat: no-repeat;
+  //background-attachment: fixed;
+ 
+  background-color: white;
+}
+
+.container {
+  /* Add flex properties to center the form vertically and horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // height: 100vh;
+  width: 80%; /* Increase the width to 80% */
+  // height: 80vh;
+}
+
+.form-container {
+//  max-width: 270px;
+//  width: 100%;
+  
+//  // background-color: #ADC4CE;
+//   background-color:    #C5D0DA;
+//   border-radius: 5px;
+   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+   align-items: center;
+   height:71%;
+  //  margin-top: 8%;
+ 
+
+}
+.image-container {
+  padding: 20px;
+  z-index: 1; 
+  position: relative;
+  background-color: white; 
+  height: 100%;
+ 
+}
+
+    .form-outline {
+      margin-bottom: 20px;
+      width: 100%;
+      margin-bottom: 10px;
+      margin-left:1px;
+      margin-right: 1px;
+    }
+  
+    .form-control {
+      height: 16px;
+      font-size: 16px;
+      padding: 5px; /* Reduce the padding inside the input box */
+      text-align: center;
+        width: 100%;
+    }
+  
+    .zoom-label {
+      transform: scale(1.2); /* Adjust the scale value as needed */
+    }
+    .form-check-label {
+    font-size: 22px; /* Adjust the font size as needed */
+  }
+    .btn-primary {
+      height: 30px;
+      font-size: 18px;
+    }
+  
+    .form-label{
+      color: rgb(103, 103, 228);
+    }
+    
+    .form-container button{
+      background-color:rgb(31, 67, 122);
+      
+    }
+    
+   /* Add an additional CSS rule for a separator line */
+.separator {
+ // border-right: 5px solid #ccc; /* Adjust border properties as needed */
+  height: 50%; /* Set the height to match the height of the form */
+  margin-right:1px; /* Adjust the margin to create space between the image and form */
+ 
+}
+    .common-form {
+      max-width: 300px;
+      height: 300px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+       align-items: center;
+      background:white;
+      padding: 50px;
+     
+    }
+    .btn.btn-primary.btn-block {
+      width: 100%; /* Make the button cover the full width of its container */
+      height: 40px; /* You can adjust the height as needed */
+      font-size: 16px; /* You can adjust the font size as needed */
+      color:white;
+      border-radius: 10px;
+      margin-left: 8%;
+      
+    }
+    .form-outline i {
+      position: absolute;
+  }
+    
+ 
+    
+  .icon {
+      padding: 12px;
+      background-color :  rgb(31, 67, 122);
+      min-width: 8px;
+      text-align: center;
+      color:white
+  }
+    
+  .form-control{
+      width: 100%;
+      padding: 10px;
+      text-align: center;
+      
+  }
+    
+  h2 {
+      color: rgb(244, 244, 250);
+  }
+
+
+
+
+      /* Add custom CSS for positioning the eye icon */
+      .password-container {
+        position: relative;
+      }
+
+      .password-container .eye-icon {
+        position: absolute;
+        top: 50%;
+        right: -15px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        color:rgb(2, 1, 77); /* Change to your desired color for the eye icon */
+        font-size: 18px;
+      }
+    
+      .text-danger{
+        color: black;
+      }
+      .form-check-label{
+        color:darkslategray
+
+      }
+   /* Your existing styles */
+
+   .dropdown-box {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+    left: 1px;
+  }
+
+  .dropdown-box select {
+    padding: 2px; /* Adjust the padding as needed */
+      height: 40px; /* Adjust the height as needed */
+      width: 110%;
+      font-size: 16px;
+      padding-left: 100px; /* Adjust the padding-left to shift the values to the right */
+  }
+
+  .dropdown-box .icon {
+    padding: 12px;
+    background-color: rgb(2, 1, 77);
+    min-width: 8px;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1px;
+  }
+    
+  .form-control.email-input {
+    width: 100%; /* Adjust the width to increase the length of the email input box */
+    padding-left: 70px; /* Add padding to the left to shift content to the right */
+  }
+  .text {
+    color: black;
+    font-family: bold;
+    font-size: 30px;
+     font-family: sans-serif; ;
+    
+  }
+  
+  

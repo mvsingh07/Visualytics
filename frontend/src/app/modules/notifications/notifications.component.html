@@ -1,0 +1,24 @@
+<div class="heading5">User Operations</div>
+
+<div class="operation-container">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- Description Column -->
+    <ng-container matColumnDef="description">
+      <th mat-header-cell *matHeaderCellDef>Description</th>
+      <td mat-cell *matCellDef="let operation">{{ operation.description }}</td>
+    </ng-container>
+
+    <!-- Status Column -->
+    <ng-container matColumnDef="timestamp">
+      <th mat-header-cell *matHeaderCellDef>Timestamp</th>
+      <td mat-cell *matCellDef="let operation">
+        <span [class]="operation.timestamp">{{ operation.timestamp }}</span>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+
+  <mat-paginator [pageSize]="14" showFirstLastButtons></mat-paginator>
+</div>

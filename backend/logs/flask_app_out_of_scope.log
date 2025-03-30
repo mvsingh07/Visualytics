@@ -1,0 +1,118 @@
+2024-11-28 17:39:42,081 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://192.168.1.131:5001
+2024-11-28 17:39:42,081 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-28 17:39:42,092 - INFO -  * Restarting with watchdog (inotify)
+2024-11-28 17:39:42,190 - WARNING -  * Debugger is active!
+2024-11-28 17:39:42,190 - INFO -  * Debugger PIN: 712-438-381
+2024-11-28 17:40:34,948 - INFO - 192.168.1.173 - - [28/Nov/2024 17:40:34] "[33mPOST /moveToOutOfScope HTTP/1.1[0m" 404 -
+2024-11-28 17:44:38,488 - INFO - 192.168.1.173 - - [28/Nov/2024 17:44:38] "POST /move_out_of_scope_files HTTP/1.1" 200 -
+2024-11-28 17:46:37,709 - INFO - 192.168.1.173 - - [28/Nov/2024 17:46:37] "[31m[1mGET /move_out_of_scope_files HTTP/1.1[0m" 405 -
+2024-11-28 17:46:37,968 - INFO - 192.168.1.173 - - [28/Nov/2024 17:46:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-11-28 17:47:47,178 - INFO -  * Detected change in '/home/turtleii/BeguileM5/FTSOPTIMIZED_1.6.3/backend/out_of_scope_management.py', reloading
+2024-11-28 17:47:47,180 - INFO -  * Detected change in '/home/turtleii/BeguileM5/FTSOPTIMIZED_1.6.3/backend/out_of_scope_management.py', reloading
+2024-11-28 17:47:47,182 - INFO -  * Detected change in '/home/turtleii/BeguileM5/FTSOPTIMIZED_1.6.3/backend/out_of_scope_management.py', reloading
+2024-11-28 17:47:48,172 - INFO -  * Restarting with watchdog (inotify)
+2024-11-28 17:47:48,254 - WARNING -  * Debugger is active!
+2024-11-28 17:47:48,254 - INFO -  * Debugger PIN: 712-438-381
+2024-11-28 17:49:03,530 - INFO - 192.168.1.173 - - [28/Nov/2024 17:49:03] "POST /move_out_of_scope_files HTTP/1.1" 200 -
+2024-11-28 17:52:16,306 - INFO -  * Detected change in '/home/turtleii/BeguileM5/FTSOPTIMIZED_1.6.3/backend/out_of_scope_management.py', reloading
+2024-11-28 17:52:16,307 - INFO -  * Detected change in '/home/turtleii/BeguileM5/FTSOPTIMIZED_1.6.3/backend/out_of_scope_management.py', reloading
+2024-11-28 17:52:16,380 - INFO -  * Detected change in '/home/turtleii/BeguileM5/FTSOPTIMIZED_1.6.3/backend/out_of_scope_management.py', reloading
+2024-11-28 17:52:16,483 - INFO -  * Restarting with watchdog (inotify)
+2024-11-28 17:52:16,563 - WARNING -  * Debugger is active!
+2024-11-28 17:52:16,563 - INFO -  * Debugger PIN: 712-438-381
+2024-11-28 17:53:58,166 - INFO -  * Detected change in '/home/turtleii/BeguileM5/FTSOPTIMIZED_1.6.3/backend/file_management_module_1.8.py', reloading
+2024-11-28 17:53:58,168 - INFO -  * Detected change in '/home/turtleii/BeguileM5/FTSOPTIMIZED_1.6.3/backend/file_management_module_1.8.py', reloading
+2024-11-28 17:53:58,168 - INFO -  * Detected change in '/home/turtleii/BeguileM5/FTSOPTIMIZED_1.6.3/backend/file_management_module_1.8.py', reloading
+2024-11-28 17:53:59,126 - INFO -  * Restarting with watchdog (inotify)
+2024-11-28 17:53:59,199 - WARNING -  * Debugger is active!
+2024-11-28 17:53:59,199 - INFO -  * Debugger PIN: 712-438-381
+2024-11-28 18:00:54,611 - INFO -  * Detected change in '/home/turtleii/BeguileM5/FTSOPTIMIZED_1.6.3/backend/out_of_scope_management.py', reloading
+2024-11-28 18:00:54,611 - INFO -  * Detected change in '/home/turtleii/BeguileM5/FTSOPTIMIZED_1.6.3/backend/out_of_scope_management.py', reloading
+2024-11-28 18:00:54,614 - INFO -  * Detected change in '/home/turtleii/BeguileM5/FTSOPTIMIZED_1.6.3/backend/out_of_scope_management.py', reloading
+2024-11-28 18:00:54,909 - INFO -  * Restarting with watchdog (inotify)
+2024-11-28 18:00:54,993 - WARNING -  * Debugger is active!
+2024-11-28 18:00:54,993 - INFO -  * Debugger PIN: 712-438-381
+2024-11-28 18:01:25,495 - INFO -  * Detected change in '/home/turtleii/BeguileM5/FTSOPTIMIZED_1.6.3/backend/out_of_scope_management.py', reloading
+2024-11-28 18:01:25,496 - INFO -  * Detected change in '/home/turtleii/BeguileM5/FTSOPTIMIZED_1.6.3/backend/out_of_scope_management.py', reloading
+2024-11-28 18:01:26,282 - INFO -  * Restarting with watchdog (inotify)
+2024-11-28 18:01:26,367 - WARNING -  * Debugger is active!
+2024-11-28 18:01:26,368 - INFO -  * Debugger PIN: 712-438-381
+2024-11-28 18:02:53,052 - INFO -  * Detected change in '/home/turtleii/BeguileM5/FTSOPTIMIZED_1.6.3/backend/out_of_scope_management.py', reloading
+2024-11-28 18:02:53,053 - INFO -  * Detected change in '/home/turtleii/BeguileM5/FTSOPTIMIZED_1.6.3/backend/out_of_scope_management.py', reloading
+2024-11-28 18:02:53,125 - INFO -  * Detected change in '/home/turtleii/BeguileM5/FTSOPTIMIZED_1.6.3/backend/out_of_scope_management.py', reloading
+2024-11-28 18:02:53,840 - INFO -  * Restarting with watchdog (inotify)
+2024-11-28 18:02:53,925 - WARNING -  * Debugger is active!
+2024-11-28 18:02:53,925 - INFO -  * Debugger PIN: 712-438-381
+2024-11-28 18:03:02,135 - INFO -  * Detected change in '/home/turtleii/BeguileM5/FTSOPTIMIZED_1.6.3/backend/out_of_scope_management.py', reloading
+2024-11-28 18:03:02,137 - INFO -  * Detected change in '/home/turtleii/BeguileM5/FTSOPTIMIZED_1.6.3/backend/out_of_scope_management.py', reloading
+2024-11-28 18:03:03,135 - INFO -  * Restarting with watchdog (inotify)
+2024-11-28 18:03:03,214 - WARNING -  * Debugger is active!
+2024-11-28 18:03:03,214 - INFO -  * Debugger PIN: 712-438-381
+2024-11-28 18:03:06,377 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://192.168.1.131:5001
+2024-11-28 18:03:06,377 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-28 18:03:06,380 - INFO -  * Restarting with watchdog (inotify)
+2024-11-28 18:03:06,458 - WARNING -  * Debugger is active!
+2024-11-28 18:03:06,458 - INFO -  * Debugger PIN: 712-438-381
+2024-11-28 18:03:45,145 - INFO - 192.168.1.173 - - [28/Nov/2024 18:03:45] "POST /move_out_of_scope_files HTTP/1.1" 200 -
+2024-11-28 18:07:16,088 - INFO -  * Detected change in '/home/turtleii/BeguileM5/FTSOPTIMIZED_1.6.3/backend/out_of_scope_management.py', reloading
+2024-11-28 18:07:16,089 - INFO -  * Detected change in '/home/turtleii/BeguileM5/FTSOPTIMIZED_1.6.3/backend/out_of_scope_management.py', reloading
+2024-11-28 18:07:16,090 - INFO -  * Detected change in '/home/turtleii/BeguileM5/FTSOPTIMIZED_1.6.3/backend/out_of_scope_management.py', reloading
+2024-11-28 18:07:16,513 - INFO -  * Restarting with watchdog (inotify)
+2024-11-28 18:07:16,592 - WARNING -  * Debugger is active!
+2024-11-28 18:07:16,592 - INFO -  * Debugger PIN: 712-438-381
+2024-11-28 18:07:37,034 - INFO -  * Detected change in '/home/turtleii/BeguileM5/FTSOPTIMIZED_1.6.3/backend/out_of_scope_management.py', reloading
+2024-11-28 18:07:37,036 - INFO -  * Detected change in '/home/turtleii/BeguileM5/FTSOPTIMIZED_1.6.3/backend/out_of_scope_management.py', reloading
+2024-11-28 18:07:37,837 - INFO -  * Restarting with watchdog (inotify)
+2024-11-28 18:07:37,920 - WARNING -  * Debugger is active!
+2024-11-28 18:07:37,921 - INFO -  * Debugger PIN: 712-438-381
+2024-11-28 18:07:41,189 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://192.168.1.131:5001
+2024-11-28 18:07:41,189 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-28 18:07:41,192 - INFO -  * Restarting with watchdog (inotify)
+2024-11-28 18:07:41,272 - WARNING -  * Debugger is active!
+2024-11-28 18:07:41,273 - INFO -  * Debugger PIN: 712-438-381
+2024-11-28 18:08:14,192 - INFO - File saved in transformedFiles: file_example_MP3_700KB.mp3
+2024-11-28 18:08:14,195 - INFO - 192.168.1.173 - - [28/Nov/2024 18:08:14] "POST /move_out_of_scope_files HTTP/1.1" 200 -
+2024-12-06 13:29:12,557 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://192.168.1.131:5001
+2024-12-06 13:29:12,557 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-06 13:29:12,561 - INFO -  * Restarting with watchdog (inotify)
+2024-12-06 13:29:12,639 - WARNING -  * Debugger is active!
+2024-12-06 13:29:12,640 - INFO -  * Debugger PIN: 681-975-098
+2024-12-06 13:30:22,228 - INFO -  * Detected change in '/home/turtleii/BeguileM5/FTSOPTIMIZED_1.6.3/backend/clientScript.py', reloading
+2024-12-06 13:30:22,230 - INFO -  * Detected change in '/home/turtleii/BeguileM5/FTSOPTIMIZED_1.6.3/backend/clientScript.py', reloading
+2024-12-06 13:30:23,034 - INFO -  * Restarting with watchdog (inotify)
+2024-12-06 13:30:23,113 - WARNING -  * Debugger is active!
+2024-12-06 13:30:23,113 - INFO -  * Debugger PIN: 681-975-098
+2024-12-06 13:31:33,791 - INFO -  * Detected change in '/home/turtleii/BeguileM5/FTSOPTIMIZED_1.6.3/backend/clientScript.py', reloading
+2024-12-06 13:31:33,793 - INFO -  * Detected change in '/home/turtleii/BeguileM5/FTSOPTIMIZED_1.6.3/backend/clientScript.py', reloading
+2024-12-06 13:31:33,795 - INFO -  * Detected change in '/home/turtleii/BeguileM5/FTSOPTIMIZED_1.6.3/backend/clientScript.py', reloading
+2024-12-06 13:31:34,539 - INFO -  * Restarting with watchdog (inotify)
+2024-12-06 13:31:34,614 - WARNING -  * Debugger is active!
+2024-12-06 13:31:34,615 - INFO -  * Debugger PIN: 681-975-098
+2024-12-07 09:40:57,605 - INFO -  * Detected change in '/home/turtleii/BeguileM5/FTSOPTIMIZED_1.6.3/backend/clientScript.py', reloading
+2024-12-07 09:40:57,607 - INFO -  * Detected change in '/home/turtleii/BeguileM5/FTSOPTIMIZED_1.6.3/backend/clientScript.py', reloading
+2024-12-07 09:40:57,609 - INFO -  * Detected change in '/home/turtleii/BeguileM5/FTSOPTIMIZED_1.6.3/backend/clientScript.py', reloading
+2024-12-07 09:40:58,634 - INFO -  * Restarting with watchdog (inotify)
+2024-12-07 09:40:58,724 - WARNING -  * Debugger is active!
+2024-12-07 09:40:58,724 - INFO -  * Debugger PIN: 681-975-098
+2024-12-07 09:41:22,479 - INFO -  * Detected change in '/home/turtleii/BeguileM5/FTSOPTIMIZED_1.6.3/backend/clientScript.py', reloading
+2024-12-07 09:41:22,481 - INFO -  * Detected change in '/home/turtleii/BeguileM5/FTSOPTIMIZED_1.6.3/backend/clientScript.py', reloading
+2024-12-07 09:41:22,482 - INFO -  * Detected change in '/home/turtleii/BeguileM5/FTSOPTIMIZED_1.6.3/backend/clientScript.py', reloading
+2024-12-07 09:41:23,155 - INFO -  * Restarting with watchdog (inotify)
+2024-12-07 09:41:23,232 - WARNING -  * Debugger is active!
+2024-12-07 09:41:23,233 - INFO -  * Debugger PIN: 681-975-098
+2024-12-07 14:47:13,630 - INFO -  * Detected change in '/home/turtleii/BeguileM5/FTSOPTIMIZED_1.6.3/backend/clientScript.py', reloading
+2024-12-07 14:47:13,632 - INFO -  * Detected change in '/home/turtleii/BeguileM5/FTSOPTIMIZED_1.6.3/backend/clientScript.py', reloading
+2024-12-07 14:47:13,634 - INFO -  * Detected change in '/home/turtleii/BeguileM5/FTSOPTIMIZED_1.6.3/backend/clientScript.py', reloading
+2024-12-07 14:47:13,845 - INFO -  * Restarting with watchdog (inotify)
+2024-12-07 14:47:13,976 - WARNING -  * Debugger is active!
+2024-12-07 14:47:13,977 - INFO -  * Debugger PIN: 681-975-098
+2024-12-24 14:41:39,423 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://192.168.1.131:5001
+2024-12-24 14:41:39,423 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-24 14:41:39,427 - INFO -  * Restarting with watchdog (inotify)
+2024-12-24 14:41:39,503 - WARNING -  * Debugger is active!
+2024-12-24 14:41:39,503 - INFO -  * Debugger PIN: 371-263-596

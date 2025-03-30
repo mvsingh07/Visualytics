@@ -1,0 +1,64 @@
+/* Set the overall container to fill the screen */
+.dashboard-container {
+    display: flex;
+    height: 100vh; /* 100% of the viewport height */
+  }
+  
+  /* Define the sidebar with a fixed width of 10% */
+  .sidebar {
+    flex: 0 0 12%;
+    background-color: #1a3344; /* Example sidebar background color */
+    color: #fff; /* Example text color */
+    /* Add styles for the sidebar */
+  }
+  
+  
+  .icons {
+    flex: 0 0 25%;
+    // background-color: #444;
+    color: #fff;
+    /* Add styles for the icons section */
+  }
+  
+  /* Sidebar extension section (toggled) */
+  .sidebar-extension {
+    flex: 1; /* Takes remaining space in the sidebar */
+    background-color: #1a3344;
+    color: #fff;
+    // display: none; /* Initially hidden */
+    /* Add styles for the extension section */
+  }
+  
+
+  /* The main content area takes up the remaining 90% */
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Define the header with a fixed height (e.g., 60px) */
+  .header {
+    height: 60px;
+    background-color: #555; /* Example header background color */
+    color: #fff; /* Example text color */
+    position: fixed; /* Fixed header position */
+    width: 90%; /* To align with the dashboard */
+    /* Add styles for the header */
+  }
+  
+  /* Define the dashboard area (flexible) */
+  .dashboard {
+    flex: 1; /* Takes remaining space in the main content */
+    background-color: #ddd; /* Example dashboard background color */
+    /* Add styles for the dashboard */
+  }
+  
+  /* Define the footer with a fixed height (e.g., 40px) */
+  .footer {
+    height: 40px;
+    background-color: #555; /* Example footer background color */
+    color: #fff; /* Example text color */
+    /* Add styles for the footer */
+  }
+  

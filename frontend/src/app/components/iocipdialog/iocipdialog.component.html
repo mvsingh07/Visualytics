@@ -1,0 +1,12 @@
+<div class="iocip-container">
+    <h2>IOCIP Data</h2>
+    <ul>
+      <li *ngFor="let ip of paginatediocip" class="iocip-item">{{ ip }}</li>
+    </ul>
+    <mat-paginator [length]="iocip.length"
+    [pageSize]="pageSize"
+    [pageSizeOptions]="[10, 15, 20]"
+    (page)="handlePageEvent($event)">
+</mat-paginator>
+  </div>
+  

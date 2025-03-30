@@ -1,0 +1,17 @@
+<html>
+<div class="wrapper">
+<div class="container">
+    <div class="form-container">
+      <h3>Please enter your email address. You will receive a link to create a new password via email</h3>
+  
+      <form [formGroup]="emailForm" (ngSubmit)="onSubmit()">
+        <label>Email Address</label>
+        <!-- Bind the email field to the FormControl using formControlName -->
+        <input type="email" formControlName="email" class="input" />
+  
+        <button type="submit" class="submit-btn">Send</button><br>
+      </form>
+    </div>
+  </div>
+</div>
+</html>

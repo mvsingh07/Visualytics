@@ -1,0 +1,14 @@
+<div class="iocemail-container">
+    <h2>IocEmail Data</h2>
+    <ul>
+      <li *ngFor="let email of paginatediocemail" class="iocemail-item">{{ email}}</li>
+    </ul>
+
+    <mat-paginator [length]="iocemail.length"
+    [pageSize]="pageSize"
+    [pageSizeOptions]="[10, 15, 20]"
+    (page)="handlePageEvent($event)">
+    </mat-paginator>
+
+  </div>
+  

@@ -1,0 +1,52 @@
+
+<body>
+  <div class="container">
+
+    <div class="title">
+      <h2>Choose Source Folder</h2>
+    </div>
+    
+    <div class="subtitle">
+    <h3>Specify the location where the files to be transformed are located</h3>
+    </div>
+
+  <div class="upload-section">
+  <img src="assets/secureFolder.jpg" alt="Your Image" class="header-image">
+  <div>
+    <!-- Use the 'webkitdirectory' attribute to allow folder selection -->
+    <form enctype="multipart/form-data">
+
+      <!-- <label for="inputFolder" class="folder-input-label">
+        <mat-icon>upload</mat-icon> Upload Folder
+        <input type="file" id="inputFolder" name="inputFolder" (change)="onInputFolderSelected($event)" webkitdirectory directory multiple style="display:none;">
+      </label>
+      
+      <span *ngIf="selectedInputFolderName">
+        <div class="text1"> Folder <div class="text"> {{ selectedInputFolderName }}</div> Files Uploaded, Please Start Processing</div> 
+      </span>
+      
+      <button (click)="sendFolderPaths($event)" [disabled]="!selectedInputFolderName">Start Processing</button> -->
+
+      <label for="inputFiles" class="file-input-label">
+        <mat-icon>attach_file</mat-icon> Upload Files
+        <input type="file" id="inputFiles" name="inputFiles" (change)="onFileSelected($event)" style="display:none;">
+      </label>
+      
+    </form>
+  </div>
+</div>
+
+  </div>
+</body>
+
+    <!-- <div class="download-section">
+      <h2>Choose Destination Folder</h2>
+      <div>
+        <form enctype="multipart/form-data">
+          <input type="file" id="outputFolder" name="outputFolder" (change)="onOutputFolderSelected($event)" webkitdirectory directory multiple>
+          <span *ngIf="selectedOutputFolderName">{{ selectedOutputFolderName }}</span>
+        </form>
+      </div>
+    </div> -->
+
+    <!-- <button (click)="sendFolderPaths($event)">Initiate Directories</button> -->

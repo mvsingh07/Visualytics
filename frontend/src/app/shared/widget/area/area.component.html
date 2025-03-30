@@ -1,0 +1,15 @@
+
+<div class="chart-container">
+ 
+  <select class="file-type-dropdown" (change)="onFileTypeSelected($event)">
+    <option selected disabled>File Type</option>
+
+    <option value="All">All</option> 
+    <option *ngFor="let type of fileTypes">{{type}}</option>
+    </select>
+
+
+<div class="container-wrapper">
+  <div id="container-speed"></div>
+  <div id="container-rpm"></div>
+</div>

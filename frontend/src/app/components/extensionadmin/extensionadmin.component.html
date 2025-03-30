@@ -1,0 +1,121 @@
+
+
+<div class="extension-container">
+        <mat-nav-list (mouseleave)="onIconLeave()">
+        
+            <mat-divider></mat-divider>
+            <!-- <br>
+            <br>  <br> -->
+            <a mat-list-item routerLinkActive="list-item-active " routerLink="/admin/admindd">
+                    <div class ="text"> Dashboard</div>
+              </a>
+        
+            <mat-divider></mat-divider>
+           <br>
+    
+            <a mat-list-item routerLinkActive="list-item-active" routerLink="/admin/filestats"> 
+    
+                    <div class ="text">  File Statistics</div>
+            </a>
+    
+            <mat-divider></mat-divider>
+            <br>
+            
+            
+            <a mat-list-item routerLinkActive="list-item-active " routerLink="/admin/records">
+        
+                    <div class ="text">  IOC Report</div>     
+                </a>
+                <mat-divider></mat-divider>
+           
+            <br>
+          
+            <a mat-list-item routerLinkActive="list-item-active" routerLink="/admin/uploadFile">
+             
+                    <div class ="text">  Upload Files</div>
+            </a>
+            <mat-divider></mat-divider>
+    
+            <br>
+            
+            <a mat-list-item routerLinkActive="list-item-active" routerLink="/admin/download">
+               
+                    <div class ="text">  Download Files</div>
+               
+            </a>
+            
+            <mat-divider></mat-divider>
+    
+            <br>
+
+            <a mat-list-item routerLinkActive="list-item-active" routerLink="/admin/api">
+               
+                <div class ="text"> Api Services</div>
+           
+           </a>
+            <mat-divider></mat-divider>
+
+        <br>
+            <a mat-list-item routerLinkActive="list-item-active" routerLink="/admin/report">
+               
+                <div class ="text">  Download Report</div>
+           
+           </a>
+            <mat-divider></mat-divider>
+
+        <br>
+
+        <a mat-list-item routerLinkActive="list-item-active " routerLink="/admin/settings" >
+                <div class ="text" > Settings</div>
+          </a>
+    
+        <mat-divider></mat-divider>
+       <br>
+       <a mat-list-item routerLinkActive="list-item-active " routerLink="/admin/help" >
+        <div class ="text" > Help</div>
+  </a>
+
+<mat-divider></mat-divider>
+<br>
+
+<a mat-list-item href="https://192.168.1.230:8080/#/workloads?namespace=default" target="_blank" class="list-item-active"
+(onclick)="onIconLeave()">
+<div class="text"> Kubernetes</div>
+</a>
+<mat-divider></mat-divider>
+<br>
+
+<a mat-list-item routerLinkActive="list-item-active " [routerLink]="['/admin/opensearch']" target="_self"
+        (onclick)="onIconLeave()">
+        <div class="text"> Opensearch</div>
+</a>
+<mat-divider></mat-divider>
+<br>
+
+
+
+            <a mat-list-item routerLinkActive="list-item-active"  routerLink="/admin/mainProfile">
+                <br>  
+                    <div class ="text"> Profile</div>
+                    <div class="mat-icon">   
+                        <!-- <mat-menu #menu="matMenu">
+                          <button mat-button class="welcome-text">
+                            Welcome {{ loggedInUserName }}
+                          </button>
+                          <mat-divider></mat-divider>
+                          <button mat-button class="logout-button" (click)="logout()">
+                            <mat-icon>exit_to_app</mat-icon>
+                            Sign out
+                          </button>
+                        </mat-menu> -->
+                      </div>
+            </a>
+            <mat-divider></mat-divider>
+            <br>
+           
+            <button mat-button class="logout-button" (click)="logout()"><div class="button-text">Sign Out</div>
+            </button>
+         
+        </mat-nav-list>
+        </div>
+    

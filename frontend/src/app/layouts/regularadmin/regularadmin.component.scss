@@ -1,0 +1,71 @@
+/* Modify the existing CSS */
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: auto;
+  }
+  .header-container{
+    zoom: 1.13;
+  }
+  .sidebarContainer {
+    display: flex;
+    flex: 1;
+    zoom: 1.15;
+    // height: 100%;
+  }
+  
+  .content-container {
+    padding: 20px;
+    transition: margin-left 0.3s;
+    zoom: 0.85;
+    flex-grow: 1; /* Allow content to expand to fill available vertical space */
+  }
+  
+  mat-drawer-container {
+    height: 100%;
+  }
+  
+  mat-drawer-content {
+    padding: 20px;
+  
+  }
+  
+  .footer-container {
+    color: white;
+    text-align: center;
+    width: 100%;
+    zoom: 1.15;
+    z-index: 1; /* To ensure footer is above other content */
+  }
+  
+  @media (max-width: 1300px) {
+    body {
+      zoom: 0.75;
+    }
+  }
+  
+  .dark-mode {
+    background-color: #121212; /* Dark background color */
+    color: #ffffff; /* Light text color */
+  }
+  
+  @media (min-width:1300px) {
+    .sidebarContainer {
+      display: flex;
+      flex: 1;
+      height: 100%;
+      zoom: 1.15;
+    
+    }
+    mat-drawer-content {
+      padding: 20px;
+      zoom: 0.85;
+    
+    }
+    .header-container {
+     
+      // transition: margin-left 0.3s;
+      zoom:1.14;
+     
+    }}

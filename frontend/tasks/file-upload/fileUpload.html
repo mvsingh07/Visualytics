@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Folder Selection and File Upload</title>
+</head>
+<body>
+  <input type="file" id="folderInput" webkitdirectory directory />
+  <button onclick="uploadFiles()">Upload Files</button>
+
+  <ul id="selectedFiles"></ul>
+
+  <script>
+    const folderInput = document.getElementById('folderInput');
+    const selectedFilesList = document.getElementById('selectedFiles');
+
+    folderInput.addEventListener('change', () => {
+      const selectedFolder = folderInput.files[0];
+
+      // Display selected folder and files
+      selectedFilesList.innerHTML = '';
+      if (selectedFolder) {
+        selectedFilesList.innerHTML = `<li>Selected Folder: ${selectedFolder.name}</li>`;
+        for (const file of selectedFolder.files) {
+          selectedFilesList.innerHTML += `<li>${file.name}</li>`;
+        }
+      }
+    });
+
+    function uploadFiles() {
+      const selectedFolder = folderInput.files[0];
+
+      if (!selectedFolder) {
+        alert('Please select a folder.');
+        return;
+      }
+
+      const formData = new FormData();
+      for (const file of selectedFolder.files) {
+        formData.append('files', file);
+      }
+
+      // Use fetch or another method to send formData to your server
+      fetch('http://192.168.1.131:8021/upload', {
+        method: 'POST',
+        body: formData,
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log('Files uploaded successfully:', data);
+          alert('Files uploaded successfully.');
+        })
+        .catch((error) => {
+          console.error('Error uploading files:', error);
+          alert('File upload failed.');
+        });
+    }
+  </script>
+</body>
+</html>

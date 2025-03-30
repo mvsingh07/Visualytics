@@ -1,0 +1,72 @@
+<mat-toolbar id="header" [class.dark-mode]="enableDarkMode">
+  <mat-toolbar-row>
+    <button mat-icon-button (click)="toggleSideBar()">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <span> FILE TRANSFORMATION SYSTEM</span>
+    <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+      <button mat-button class="create-user-button" (click)="createUser()">
+        <mat-icon>person_add</mat-icon>
+        Create User
+      </button>
+      <ul fxLayout="row" fxLayoutGap="20px" class="icon-list">
+        <li>
+          <button
+            mat-icon-button
+            onclick="onNotificationClicked()"
+            routerLink="/user/appOperations"
+          >
+            <mat-icon class="material-icons" mat-raised-button
+              >notifications</mat-icon
+            >
+          </button>
+        </li>
+        <li>
+          <button mat-icon-button routerLink="/user/settings">
+            <mat-icon>settings</mat-icon>
+          </button>
+        </li>
+
+        <li>
+          <button mat-icon-button routerLink="/user/help">
+            <mat-icon>help_outline</mat-icon>
+          </button>
+        </li>
+
+        <li>
+          <button mat-button [matMenuTriggerFor]="menu">
+            <i class="material-icons">person</i>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-button class="welcome-text">
+              Welcome {{ loggedInUserName }}
+            </button>
+            <mat-divider></mat-divider>
+
+            <button
+              mat-button
+              class="button-text"
+              routerLink="/admin/mainProfile"
+            >
+              <mat-icon>person</mat-icon>
+              My Profile
+            </button>
+            <mat-divider></mat-divider>
+
+            <button mat-button class="button-text" routerLink="/admin/mytasks">
+              <mat-icon>tasks</mat-icon>
+              My Tasks
+            </button>
+            <mat-divider></mat-divider>
+
+            <button mat-button class="logout-button" (click)="logout()">
+              <mat-icon class="logOut">exit_to_app</mat-icon>
+              <div class="logText">Sign out</div>
+            </button>
+          </mat-menu>
+        </li>
+      </ul>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

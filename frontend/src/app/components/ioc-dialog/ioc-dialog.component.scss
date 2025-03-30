@@ -1,0 +1,32 @@
+.iocdialog-container {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    // width: 300px;
+    margin: 0 auto;
+  }
+  
+  .iocdialog-container h2 {
+    text-align: center;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 16px;
+  }
+  
+  .iocdialog-container ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .iocdialog-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 8px;
+    font-family: 'Arial', sans-serif;
+    color: #555;
+  }
+  

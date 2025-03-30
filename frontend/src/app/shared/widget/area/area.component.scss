@@ -1,0 +1,41 @@
+.container-wrapper {
+    display: flex; /* Use flex display for one-line layout */
+ 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+   
+  }
+
+
+  #container-speed, #container-rpm {
+
+    // margin-top: 100px;
+    width: 65%; /* Adjust the width as needed */
+    height: 320px; /* Adjust the height as needed */
+  }
+  
+  .chart-container {
+    position: relative;
+    
+  }
+  
+
+  .file-type-dropdown {
+    position: absolute;
+    top: 70px;
+    left: 10px;
+    z-index: 1;
+    height: 40px; /* Increase the height as needed */
+    font-size: 16px; /* Change the font size */
+    font-family: Arial, sans-serif; /* Change the font family */
+    padding: 5px; /* Add padding for better appearance */
+    border: 1px solid #ccc; /* Add a border */
+    background-color: #fff; /* Background color */
+    border-radius: 5px; /* Rounded corners */
+    outline: none; /* Remove the default focus outline */
+  }
+  
+  .file-type-dropdown option {
+    font-size: 16px; /* Change the font size for dropdown options */
+    font-family: Arial, sans-serif; /* Change the font family for dropdown options */
+  }
+  

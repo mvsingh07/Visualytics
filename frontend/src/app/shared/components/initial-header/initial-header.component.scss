@@ -1,0 +1,38 @@
+ul li{
+    list-style:none;
+}
+
+.mat-toolbar{
+    // background-color:#006666;
+    // background-color: #264d59;
+    color:#1a3344;
+    background-color: white;
+    // border-radius: 4px;
+    border-top: 1px solid #1a3344;
+    border:1px solid #1a3344;
+    // color:white;
+    font-family: 'DM Sans',sans-serif;
+    font-size: large;
+    font-weight: bold;
+  }
+  
+span{
+    margin-left: 25px;
+}
+
+
+/* header.component.css (or your custom CSS file) */
+.logout-button {
+    font-size: 15px; /* Change this value to adjust the font size as per your requirement */
+  }
+  
+
+  .icon-list {
+    display: flex;
+    align-items: center; /* Vertically center the icons */
+}
+
+.icon-button {
+    padding: 0; /* Remove default button padding */
+}
+

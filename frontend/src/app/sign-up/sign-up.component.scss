@@ -1,0 +1,102 @@
+/* Remove the background-size, background-position, and overflow properties from body, html */
+body, html {
+  // height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+
+}
+
+.container {
+  display: flex;
+  width: 50%; /* Adjust the width as needed */
+  height: 50%;
+  background-color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.form-container,
+.image-container {
+  flex: 1; /* Set both containers to occupy equal width */
+  padding: 30px;
+}
+
+.image-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  zoom: 1.4;
+}
+.btnl,
+.submit {
+  margin-top: 22px;
+  width: 100%; /* Make buttons fill their container */
+}
+
+.fa {
+  margin-top: 25px; 
+}
+
+.form-container {
+  // max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.password-input {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 1px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.password-toggle i {
+  color: #777;
+}
+
+.password-toggle.active i {
+  color: #333;
+}
+
+.submit, .btnl {
+  width: 100%;
+  background-color: #007bff; /* Change button color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Add transition for hover effect */
+}
+
+.submit:hover, .btnl:hover {
+  background-color: #0056b3; /* Change button color on hover */
+}
+
+.error-message {
+  color: #f44336;
+  margin-top: 5px;
+}
+

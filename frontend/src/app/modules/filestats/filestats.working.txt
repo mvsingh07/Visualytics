@@ -1,0 +1,11 @@
+ <ng-container matColumnDef="YARA_RESULT">
+  <th mat-header-cell *matHeaderCellDef><mat-form-field>
+    <mat-label>YARA_RESULT</mat-label>
+    <input matInput (keyup)="applyFilter('YARA_RESULT', fileTypeInput.value)" #fileTypeInput placeholder="Enter YARA_RESULT">
+  </mat-form-field> </th>
+   <td mat-cell *matCellDef="let element">
+    <ng-container *ngIf="isValidYARA_RESULT(element.YARA_RESULT)">
+       <button mat-button (click)="showMacroData(element.YARA_RESULT)"> YARA_RESULT </button>
+    </ng-container>
+   </td>
+</ng-container> 

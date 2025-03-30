@@ -1,0 +1,106 @@
+/* Reset default margin & background */
+body {
+  background-color: #f4f7fc;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto; /* Enables horizontal scrolling on small screens */
+  padding: 0 10px; /* Adds padding for better spacing */
+}
+.custom-table {
+  width: 100%;
+  border-collapse: collapse; // Ensures proper spacing
+
+  th, td {
+    text-align: left;
+    padding: 12px; // Ensures equal indentation
+    border: 1px solid rgba(0, 0, 0, 0.2); // Adds vertical & horizontal lines
+  }
+
+  th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  td {
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  // Ensures equal column width
+  th:first-child, td:first-child {
+    width: 50%;
+  }
+
+  th:last-child, td:last-child {
+    width: 50%;
+  }
+}
+
+
+/* Custom Material Table Styling */
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto; /* Ensures adaptive column width */
+}
+/* Header Styling */
+th.mat-header-cell {
+  background-color: #5bc8d0;
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+  text-align: left;
+}
+
+/* Row Styling */
+  td.mat-cell {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+  }
+
+/* Alternating Row Colors */
+tr.mat-row:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Dynamic Coloring based on time */
+.recent {
+  font-weight: bold;
+  color: #43a047; /* Green for recent timestamps */
+}
+
+.old {
+  font-weight: bold;
+  color: #fb2d2d; /* Yellow for medium-aged timestamps */
+}
+
+.medium {
+  font-weight: bold;
+  color: #3555e5; /* Red for old timestamps */
+}
+
+/* Pagination Styling */
+.mat-paginator {
+  background-color: white;
+  border-top: 1px solid #ddd;
+  padding: 10px;
+}
+/* operation-list.component.css */
+
+.heading5{
+
+  background-color: white;
+  padding: 1.5%;
+  margin: 2%;
+  border-radius: 22px;
+  background-color: rgb(91, 200, 208);
+  // font-family: 'Times New Roman', Times, serif;
+  font-size: xx-large;
+  text-align: center;
+}

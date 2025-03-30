@@ -1,0 +1,186 @@
+
+.settings-container {
+  max-width: 700px;
+  margin: auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  // height: 100%;
+  border-radius: 8px;
+  flex-grow: 1;  
+}
+
+.big-Container{
+ display:flex;
+ flex-grow:1;
+
+}
+
+.bigContainer1{
+  width: 50%;
+}
+.bigContainer2{
+  width: 50%;
+
+}
+
+  
+.container{
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+
+  // align-items: center;
+
+}
+.container1, .container2 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Adjust spacing between elements */
+}
+
+
+.container1 select, .container2 input {
+  width: 100%; /* Full width for input elements */
+  padding: 8px; /* Add padding for better appearance */
+  box-sizing: border-box; /* Include padding in width calculation */
+  margin-left: 5px; /* Adjust spacing between input and label */
+}
+
+button {
+  width: 50%;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+  
+  h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .setting-option {
+    position: relative;
+    // display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    cursor: pointer;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .setting-option:hover {
+    background-color: #f5f5f5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  label {
+    flex-grow: 1;
+    color: #555;
+  }
+  
+  .option-content {
+    display: none;
+    margin-top: 20px;
+  }
+  
+  .setting-option.expanded .option-content {
+    display: block;
+    width: 100%;
+  }
+  
+  /* Add more styling as needed */
+  
+/* Add this styling for the password toggle */
+.password-container {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  left: 170px;
+  // right: 540px;
+  transform: translateY(-75%);
+  cursor: pointer;
+}
+
+.password-toggle i {
+  font-size: 18px;
+  color: #777;
+}
+
+.password-toggle:hover i {
+  color: #333;
+}
+
+
+.edit-profile {
+  margin-top: 30px;
+  border-top: 1px solid #ffffff;
+  padding-top: 20px;
+}
+
+.edit-profile h2 {
+  color: #1a3344;
+  margin-bottom: 15px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+}
+
+input {
+  padding: 8px;
+  margin-bottom: 15px;
+}
+
+button {
+  background-color: #1a3344;
+  color: white;
+  border: none;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.button1 {
+  font-size: 14px;
+  width: 150px;
+
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Add this CSS to your component's style file (e.g., profile.component.css) */
+
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.toggle-password:hover {
+  color: #007bff;
+}
+

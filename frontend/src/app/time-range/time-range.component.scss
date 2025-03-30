@@ -1,0 +1,140 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.left-section {
+  margin-top: 11px;
+  // margin-left: 800px;
+}
+
+.right-section{
+  // margin-top: 20px;
+  // text-align: end;
+  // align-items: end;
+}
+
+
+.heading1 {
+  font-family: 'DM Sans', sans-serif;
+  font-size:x-large;
+  font-weight: bold;
+  margin-right: 400px; /* Add margin to separate from the form */
+}
+
+ form{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    height:50px;
+    background-color: white;
+    color: white;
+  }
+  
+//   input{
+//     margin-bottom: 14px; 
+//     margin-left: 30px;
+//   }
+
+ 
+  // input[type="text"] {
+  //   padding: 10px;
+  //   border: 1px solid white;
+  //   background-color: white;
+  //   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  //   transition: border-color 0.3s ease;
+  //   cursor: pointer;
+  //   color:black;
+  //   transition: background-color 0.3s ease;
+  // }
+  
+  // input[type="text"]::placeholder {
+  //   font-family: 'DM Sans',sans-serif;
+  //   font-weight: bold;
+  //   // color:black;
+  // }
+  
+  // input[type="text"]:focus {
+  //   border-color: #007bff;
+  //   // color: #ffffff;
+  //   color:black;
+  // }
+
+
+  @media (max-width:800px){
+
+    
+  .heading1 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: x-large;
+    font-weight: bold;
+
+  }
+
+  form {
+    display: inline;
+    align-items: center;
+    color:black;
+     }
+
+
+  input{
+    // margin-bottom: 14px; 
+    margin-left: 0px;
+  }
+
+  }
+
+
+
+  .button1{
+ 
+    margin-left: 50px;
+    align-items: center;
+    background-color: whitesmoke;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'DM Sans',sans-serif;
+    font-weight:bold;
+    color:rgb(94, 93, 93);
+  }
+
+
+
+  button{
+    // margin-bottom: 14px; 
+    margin-left: 30px;
+    height: 50px;
+    margin-top: 5px;
+    width: max-content;
+    background-color: whitesmoke;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    border: none;
+    // padding: 10px 20px;
+    cursor: pointer;
+    color:black;
+    transition: background-color 0.3s ease;
+    font-family: 'DM Sans',sans-serif;
+
+  }
+
+  button:hover{
+    background-color: rgb(31, 67, 122);
+    color:white;
+ 
+    font-weight:bold;
+  }
+
+  
+@media (max-width:860px) {
+
+
+   body{
+    zoom:0.70;
+   }
+
+
+
+}

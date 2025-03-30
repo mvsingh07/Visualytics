@@ -1,0 +1,49 @@
+<body>
+  <div class="dashboard">
+    <div class="row">
+      <div class="card">
+        <mat-icon class="icon">insert_drive_file</mat-icon>
+        <div class="title">Total Files</div>
+        <div class="value">{{ totalFiles }}</div>
+      </div>
+
+      <div class="card">
+        <mat-icon class="icon">check_circle</mat-icon>
+        <div class="title">Success Files</div>
+        <div class="value">{{ sucessFiles }}</div>
+      </div>
+
+      <div class="card">
+        <mat-icon class="icon">cancel</mat-icon>
+        <div class="title">Bad Requests</div>
+        <div class="value">{{ badRequests }}</div>
+      </div>
+
+      <div class="card">
+        <mat-icon class="icon">thumb_up</mat-icon>
+        <div class="title">Success Rate</div>
+        <div class="value">{{ successRate.toFixed(2) }}%</div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="card">
+        <mat-icon class="icon">schedule</mat-icon>
+        <div class="title">Files Processed Per Day</div>
+        <div class="value">{{ successFilesInRange }}</div>
+      </div>
+
+      <div class="card">
+        <mat-icon class="icon">storage</mat-icon>
+        <div class="title">Data Processed Per Day</div>
+        <div class="value">{{ finalVolumeInRange }}</div>
+      </div>
+
+      <div class="card">
+        <mat-icon class="icon">storage</mat-icon>
+        <div class="title">Total Volume</div>
+        <div class="value">{{ finalVolume }}</div>
+      </div>
+    </div>
+  </div>
+</body>

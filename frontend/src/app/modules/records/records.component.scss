@@ -1,0 +1,63 @@
+
+
+
+  .main-content{
+    display: flex;
+    flex-grow: 1;
+
+  }
+  .heading3{
+
+    font-family: 'Times New Roman', Times, serif;
+    font-size: xx-large;
+    text-align: center;
+    padding: 10px;
+    background-color:rgb(31, 67, 122);
+    color:white;
+    }
+  
+  .mat-card1{
+
+    margin-left: 5%;
+    float:left;
+    width:42%;
+    padding: 1%;
+  }
+
+  .mat-card2{
+    
+    width:42%;
+    float:left;
+    padding: 1%;
+  }
+  
+  
+
+  
+  @media (max-width:1200px)
+  {
+  
+    .mat-card1{ 
+      width: 48%;
+    }
+   
+  }
+  
+  
+  
+  @media (max-width:800px)
+  {
+    .mat-card1{ 
+      width: 100%;
+    }
+
+    .mat-card2{ 
+      width: 100%;
+    }
+   }
+
+  
+  // body {
+  //   zoom: 0.80; 
+  //   // margin-bottom:2px;
+  // }

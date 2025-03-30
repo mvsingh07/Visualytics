@@ -1,0 +1,125 @@
+<body>
+
+    <div class="sidebar-container">
+        <mat-nav-list  (mouseenter)="onIconHover()">
+        
+            <mat-divider></mat-divider>
+            <!-- <br>
+            <br>  <br> -->
+            <a mat-list-item routerLinkActive="list-item-active " routerLink="/admin/admindd">
+                <div class="mat-icon" > 
+                  <i class="material-icons">dashboard</i>
+                </div>
+              </a>
+        
+            <mat-divider></mat-divider>
+           <br>
+            <a mat-list-item routerLinkActive="list-item-active" routerLink="/admin/filestats"> 
+             
+                <div class="mat-icon" >
+                    <i class="material-icons">table_chart</i>
+                </div>
+            </a>
+            <mat-divider></mat-divider>
+            <br>
+            <a mat-list-item routerLinkActive="list-item-active " routerLink="/admin/records">
+        
+                <div class="mat-icon" >
+                    <i class="material-icons">data_usage</i>
+                </div>
+                </a>
+                <mat-divider></mat-divider>
+            <br>
+          
+            <a mat-list-item routerLinkActive="list-item-active" routerLink="/admin/uploadFile">
+                <div class="mat-icon">
+                    <i class="material-icons">file_upload</i>
+                </div>
+            </a>
+            <mat-divider></mat-divider>
+            <br>
+            
+            <a mat-list-item routerLinkActive="list-item-active" routerLink="/admin/download">
+                <div class="mat-icon">
+                    <i class="material-icons">save</i>
+                </div>
+            </a>
+            <mat-divider></mat-divider>
+            <br>
+
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/admin/api">
+            <div class="mat-icon">
+                <i class="material-icons">api</i>
+            </div>
+        </a>
+       
+        <mat-divider></mat-divider>
+
+        <br>
+            <a mat-list-item routerLinkActive="list-item-active" routerLink="/admin/report">
+                <div class="mat-icon" >
+                    <i class="material-icons"  >description</i>
+                </div>
+            </a>
+              
+            <mat-divider></mat-divider>
+            <br>
+
+
+            <a mat-list-item routerLinkActive="list-item-active" routerLink="/admin/settings">
+                <div class="mat-icon">
+                    <i class="material-icons"> settings </i>
+                </div>
+            </a>
+            <mat-divider></mat-divider>
+            <br>
+               
+
+            <a mat-list-item routerLinkActive="list-item-active" routerLink="/admin/help">
+                <div class="mat-icon" >
+                    <i class="material-icons"  >help</i>
+                </div>
+            </a>  
+            <mat-divider></mat-divider>
+            <br>
+
+            <a mat-list-item href="https://192.168.1.230:8080/#/workloads?namespace=default" target="_blank" class="list-item-active">
+                    <img src="../../../../assets/kubernetes1.svg" alt="icon">
+            </a>    
+            <mat-divider></mat-divider>
+            <br>
+
+            
+            <a mat-list-item routerLinkActive="list-item-active" [routerLink]="['/admin/opensearch']" target="_self">
+                <div class="mat-icon" >
+                    <img src="../../../../assets/opensearch.svg" alt="icon">
+                </div>
+            </a>    
+            <mat-divider></mat-divider>
+            <br>
+
+            <a mat-list-item routerLinkActive="list-item-active" routerLink="/admin/mainProfile">
+                <div class="mat-icon">   <i class="material-icons"  >person</i>
+                    <!-- <mat-menu #menu="matMenu">
+                      <button mat-button class="welcome-text">
+                        Welcome {{ loggedInUserName }}
+                      </button>
+                      <mat-divider></mat-divider>
+                      <button mat-button class="logout-button" (click)="logout()">
+                        <mat-icon>exit_to_app</mat-icon>
+                        Sign out
+                      </button>
+                    </mat-menu> -->
+                  </div>
+            </a>
+            <mat-divider></mat-divider>
+<br>
+<button mat-button (click)="logout()">
+    <div class="mat-icon2">
+      <i class="material-icons">exit_to_app</i>
+    </div>
+  </button>
+              
+        </mat-nav-list>
+        </div>
+    </body>

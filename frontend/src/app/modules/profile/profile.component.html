@@ -1,0 +1,153 @@
+<div class="professional-profile">
+  <div class="headline">
+    <h1>My Account</h1>
+  </div>
+
+  <div class="profile-details">
+    <div class="name"><strong>Name:</strong> {{ loggedInUserName }}</div>
+
+    <div class="email"><strong>Email:</strong> {{ loggedInUserEmail }}</div>
+
+    <div class="userType">
+      <strong>User Type:</strong> {{ loggedInUserType }}
+    </div>
+  </div>
+
+  <!-- Edit Profile Section -->
+  <div class="edit-profile">
+    <h2>Edit Profile</h2>
+    <form (ngSubmit)="updateUserName()">
+      <label for="editName">Change Name:</label>
+
+      <input
+        type="text"
+        id="editName"
+        name="editName"
+        placeholder="Enter new name"
+        [(ngModel)]="newName"
+      />
+      <button class="button1" type="submit">Save Changes</button>
+    </form>
+  </div>
+
+  <!-- Change Password Section -->
+  <div class="edit-profile">
+    <h2>Change Password</h2>
+    <form [formGroup]="changePasswordForm" (ngSubmit)="changePassword()">
+      <!-- Old Password Input -->
+      <div class="form-group">
+        <label for="oldPassword">Old Password:</label>
+        <div class="password-container">
+          <input
+            type="{{ showOldPassword ? 'text' : 'password' }}"
+            id="oldPassword"
+            formControlName="oldPassword"
+            placeholder="Enter old password"
+          />
+          <div class="password-toggle" (click)="togglePassword('old')">
+            <i
+              class="fas"
+              [ngClass]="showOldPassword ? 'fa-eye-slash' : 'fa-eye'"
+            ></i>
+          </div>
+        </div>
+        <div
+          *ngIf="
+            changePasswordForm.get('oldPassword')!.hasError('required') &&
+            changePasswordForm.get('oldPassword')!.touched
+          "
+          class="error-message"
+        >
+          Old Password is required.
+        </div>
+      </div>
+
+      <!-- New Password Input -->
+      <div class="form-group">
+        <label for="newPassword">New Password:</label>
+        <div class="password-container">
+          <input
+            type="{{ showNewPassword ? 'text' : 'password' }}"
+            id="newPassword"
+            formControlName="newPassword"
+            placeholder="Enter new password"
+          />
+          <div class="password-toggle" (click)="togglePassword('new')">
+            <i
+              class="fas"
+              [ngClass]="showNewPassword ? 'fa-eye-slash' : 'fa-eye'"
+            ></i>
+          </div>
+        </div>
+        <div
+          *ngIf="
+            changePasswordForm.get('newPassword')!.hasError('required') &&
+            changePasswordForm.get('newPassword')!.touched
+          "
+          class="error-message"
+        >
+          New Password is required.
+        </div>
+        <div
+          *ngIf="
+            changePasswordForm.get('newPassword')?.hasError('pattern') &&
+            changePasswordForm.get('newPassword')?.touched
+          "
+        >
+          Password must contain at least one uppercase letter, one digit, and
+          one special character (@, $, !, %, *, #, ?, &). Minimum length: 8
+          characters.
+        </div>
+      </div>
+
+      <!-- Add the confirmation field -->
+      <div class="form-group">
+        <label for="confirmPassword">Confirm New Password:</label>
+        <div class="password-container">
+          <input
+            type="{{ showConfirmPassword ? 'text' : 'password' }}"
+            id="confirmPassword"
+            formControlName="confirmPassword"
+            placeholder="Confirm new password"
+          />
+          <div class="password-toggle" (click)="togglePassword('confirm')">
+            <i
+              class="fas"
+              [ngClass]="showConfirmPassword ? 'fa-eye-slash' : 'fa-eye'"
+            ></i>
+          </div>
+        </div>
+        <div
+          *ngIf="
+            changePasswordForm.get('confirmPassword')!.hasError('required') &&
+            changePasswordForm.get('confirmPassword')!.touched
+          "
+          class="error-message"
+        >
+          Confirm Password is required.
+        </div>
+        <div
+          *ngIf="
+            changePasswordForm.hasError('mustMatch') &&
+            changePasswordForm.get('confirmPassword')?.touched
+          "
+        >
+          Passwords must match.
+        </div>
+      </div>
+
+      <!-- Change Password Button -->
+      <button type="submit" [disabled]="changePasswordForm.invalid">
+        Change Password
+      </button>
+    </form>
+  </div>
+
+  <!-- Recent Completed Tasks Section -->
+  <!-- <div class="task-container">
+      <h1>Recent Completed Cybersecurity Tasks</h1>
+      <div *ngFor="let task of tasks" class="task-item">
+        <span [class.done]="task.done">{{task.description}}</span>
+      </div>
+    </div> -->
+</div>

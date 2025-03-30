@@ -1,0 +1,30 @@
+<!-- task-list.component.html -->
+<body>
+
+  <div class="task-container">
+    <h1>LIST OF TASKS TO DO</h1>
+  
+    <div class="centered">
+      <div class="task-form">
+        <input type="text" placeholder="Enter task" [(ngModel)]="newTask" (keyup.enter)="addTask()"/>
+        <button (click)="addTask()">Add New Task</button>
+      </div>
+    </div>
+      <div *ngFor="let task of tasks" class="task-item">
+        <span [class.done]="task.done">{{task.description}}</span>
+      <div>
+
+      <button (click)="markAsDone(task)"  title="Mark as Done">
+        <i class="fas fa-check" style="color: green;"></i>
+      </button>
+          
+          <!-- Cross Button -->
+      <button (click)="deleteTask(task)"  title="Delete Task">
+        <i class="fas fa-times" style="color: red;"></i>
+      </button>
+        </div>
+      </div>
+  </div>
+
+
+</body>

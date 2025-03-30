@@ -1,0 +1,185 @@
+/* Add this CSS to your component's style file (e.g., profile.component.css) */
+
+.professional-profile {
+  // max-width: 600px;
+    max-width: 700px;
+    margin:  auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    // height: 100%;
+    border-radius: 8px;
+}
+
+.headline {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: #1a3344;
+}
+
+.profile-details {
+  margin-bottom: 20px;
+}
+
+.name,
+.email,
+.userType,
+.passwordReset {
+  margin-bottom: 15px;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.edit-profile {
+  margin-top: 30px;
+  border-top: 1px solid #ffffff;
+  padding-top: 20px;
+}
+
+.edit-profile h2 {
+  color: #1a3344;
+  margin-bottom: 15px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+}
+
+input {
+  padding: 8px;
+  margin-bottom: 15px;
+}
+
+button {
+  background-color: #1a3344;
+  color: white;
+  border: none;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+
+.button1 {
+  font-size: 14px;
+  width: 150px;
+
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Add this CSS to your component's style file (e.g., profile.component.css) */
+
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.toggle-password:hover {
+  color: #007bff;
+}
+
+
+/* task-list.component.css */
+body {
+  background-color: rgb(255, 255, 255);
+  margin: 0px;
+}
+
+.task-container {
+
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+
+h1 {
+  // margin-top: 20px;
+  text-align: center;
+  padding: 20px;
+  font-weight: 500;
+
+}
+
+span {
+  max-width: 85%;
+}
+
+.task-form {
+  display: flex;
+  margin-bottom: 20px;
+  text-align: center;
+  align-items: center;
+}
+
+.task-form input {
+  height: 35px;
+  width: 400px;
+}
+
+.task-form button {
+  height: 40px;
+  margin-left: 10px;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+  // height: 100vh; /* Adjust the height if needed */
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* Add this styling for the password toggle */
+.password-container {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  left: 170px;
+  // right: 540px;
+  transform: translateY(-75%);
+  cursor: pointer;
+}
+
+.password-toggle i {
+  font-size: 18px;
+  color: #777;
+}
+
+.password-toggle:hover i {
+  color: #333;
+}

@@ -1,0 +1,56 @@
+<!-- <body>
+    <div class="left-section">
+      <form [formGroup]="rangeForm">
+    
+          <input type="text" placeholder=" DD/MM/YYYY" formControlName="start"
+                 (focus)="onInputFocus($event, 'start')" (blur)="onInputBlur($event, 'start')">
+        
+          <input class="input2" type="text" placeholder=" DD/MM/YYYY" formControlName="end"
+                 (focus)="onInputFocus($event, 'end')" (blur)="onInputBlur($event, 'end')">
+        
+        <button (click)="onRangeSelected()">UPDATE</button>
+  
+        <button class="button2" (click)="onDashboardReload()">RESET RANGE</button>
+      </form>
+    </div>
+  </body>
+   -->
+  
+<body>
+
+
+  <div class="right-section">
+    <mat-form-field>
+      <!-- <mat-label></mat-label> -->
+      <mat-date-range-input [formGroup]="rangeForm" [rangePicker]="picker" >
+        <input matStartDate formControlName="start" placeholder="Start date">
+        <input matEndDate formControlName="end" placeholder="End date">
+      </mat-date-range-input>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-date-range-picker #picker ></mat-date-range-picker>
+
+    </mat-form-field>
+  
+  </div> 
+
+</body>
+  <!-- <button mat-raised-button (click)="onRangeSelected()">Submit</button> -->
+    <!-- <button class='button1'(click)="onDashboardReload()"><mat-icon>refresh</mat-icon></button> -->
+  <!-- <div class="left-section">
+
+ <form [formGroup]="rangeForm">
+  
+        <input type="text" placeholder=" DD/MM/YYYY " formControlName="start"
+               (focus)="onInputFocus($event, 'start')" (blur)="onInputBlur($event, 'start')">
+      
+        <input type="text" placeholder=" DD/MM/YYYY" formControlName="end"
+               (focus)="onInputFocus($event, 'end')">
+      
+      <button class="button1" (click)="onRangeSelected()">UPDATE</button>
+
+      <button (click)="onDashboardReload()"><mat-icon>refresh</mat-icon>
+      </button>
+      
+    </form>
+
+  </div> -->

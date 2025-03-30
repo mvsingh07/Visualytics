@@ -1,0 +1,54 @@
+
+<body>
+<div class="header-container">
+    <app-initial-header></app-initial-header>
+</div>
+
+
+    
+    <div class="content-container">
+        <router-outlet></router-outlet>
+  </div>
+
+
+<div  class="footer-container">
+    <app-footer></app-footer>
+</div>
+</body>
+
+
+<!-- 
+<div class="dashboard-container">
+    <div class="sidebar">
+     <div class="icons">
+        <app-sidebar (toggleSideBarForMe)="onToggleSidebar($event)"></app-sidebar>
+        </div>
+
+        <div class="sidebar-extension">
+            <mat-drawer mode="side" [opened]="sideBarOpen">
+           
+            <app-extension (toggleSideBarForMe)="onToggleSidebar($event)"></app-extension>
+           </mat-drawer> 
+        </div>
+    
+    </div>
+
+    <mat-drawer mode="side" [opened]="sideBarOpen">
+           
+        <app-extension (toggleSideBarForMe)="onToggleSidebar($event)"></app-extension>
+       </mat-drawer> 
+    
+    <div class="main-content">
+        
+      <div class="header">
+        <app-header (toggleSideBarForMe)="sideBarToggler($event)"></app-header>
+      </div>
+      <div class="dashboard">
+        <router-outlet></router-outlet>
+      </div>
+      <div class="footer">
+        <app-footer></app-footer>
+      </div>
+    </div>
+  </div>
+   -->

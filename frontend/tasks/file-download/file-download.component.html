@@ -1,0 +1,90 @@
+<body>
+
+
+<div class="main"> 
+
+  <div class="heading5"> 
+    TRANSFORMED FILES (EXTRACTED)
+
+  </div>
+
+  <!-- <mat-card class="heading5"> TRANSFORMED FILES</mat-card> -->
+      <div style="overflow-x: auto;">
+      
+        <div class="mat-elevation-z8" id="tableToExport">
+       <table mat-table [dataSource]="dataSource" class="table-boundaries" matSort>
+        
+        <!-- <ng-container matColumnDef="UNIQUE_ID">
+          <th mat-header-cell *matHeaderCellDef> <mat-form-field>
+           <mat-label>UNIQUE_ID</mat-label>
+           <input matInput (keyup)="applyFilter('UNIQUE_ID', fileTypeInput.value)" #fileTypeInput placeholder="Enter UNIQUE ID">
+         </mat-form-field> </th>
+          <td mat-cell *matCellDef="let element"> {{element.UNIQUE_ID}} </td>
+        </ng-container> -->
+      
+       <!-- // FILE_NAME Column // -->
+       <ng-container matColumnDef="FILE_NAME">
+         <th mat-header-cell *matHeaderCellDef> <mat-form-field>
+          <mat-label>FILE NAME</mat-label>
+          <input matInput (keyup)="applyFilter('FILE_NAME', fileTypeInput.value)" #fileTypeInput placeholder="Enter FILENAME">
+        </mat-form-field> </th>
+         <td mat-cell *matCellDef="let element"> {{element.FILE_NAME}} </td>
+       </ng-container>
+      
+       <!--FILE-SIZE COLUMN  -->
+       <!-- <ng-container matColumnDef="FILE_TYPE">
+         <th mat-header-cell *matHeaderCellDef> <mat-form-field>
+          <mat-label>FILE_TYPE</mat-label>
+          <input matInput (keyup)="applyFilter('FILE_TYPE', fileTypeInput.value)" #fileTypeInput placeholder="Enter FILE_TYPE">
+        </mat-form-field>  </th>
+         <td mat-cell *matCellDef="let element"> {{element.FILE_TYPE}} </td>
+       </ng-container> -->
+      
+  <!-- Download Column -->
+  <!-- <ng-container matColumnDef="STATUS">
+    <th mat-header-cell *matHeaderCellDef>
+      <mat-form-field>
+        <mat-label>DOWNLOAD</mat-label>
+        
+        <mat-select>
+        </mat-select>
+      </mat-form-field>
+    </th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-icon-button (click)="downloadFile(element.FILE_NAME)">
+        <mat-icon>cloud_download</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+   -->
+  <!----FILEPATH-->
+   <ng-container matColumnDef="FILEPATH">
+     <th mat-header-cell *matHeaderCellDef>
+       <mat-form-field>
+         <mat-label>FILEPATH</mat-label>
+         <input matInput (keyup)="applyFilter('FILEPATH', fileTypeInput.value)" #fileTypeInput placeholder="DOWNLOAD">
+       </mat-form-field>
+     </th>
+     <td mat-cell *matCellDef="let element">
+       <!-- {{element.FILEPATH}} -->
+       <button mat-button (click)="downloadFile(element.FILEPATH)">Download</button>
+       
+     </td>
+   </ng-container>
+   
+   
+
+         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      
+      <mat-paginator [pageSizeOptions]="pageSizeOptions"></mat-paginator>
+      
+      </div>
+      </div>
+
+    </div>
+      </body>
+      
+      
+      

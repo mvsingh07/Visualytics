@@ -1,0 +1,39 @@
+
+
+<body>
+      <div class="heading">TOP EXTRACTED DOMAINS</div>
+
+      <div class="card">
+                        
+
+                <div style="overflow-x: auto; ">
+
+                    <div class="mat-elevation-z8">
+                <table mat-table [dataSource]="dataSource" class="table-boundaries custom-table">
+         
+
+                  <ng-container matColumnDef="IOCDOMAIN">
+                    <th mat-header-cell *matHeaderCellDef> IOC DOMAINs</th>
+                    <td mat-cell *matCellDef="let element">                   
+                        <button mat-button (click)="showIocdomain(element.IOCDOMAIN)"> View IOC DOMAIN </button>                      
+                    </td>
+                </ng-container>
+
+                <ng-container matColumnDef="totalFiles">
+                    <th mat-header-cell *matHeaderCellDef> Total Files </th>
+                    <td mat-cell *matCellDef="let element"> {{ element.totalFiles }} </td>
+                  </ng-container>
+
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+
+                <mat-paginator [pageSizeOptions]="pageSizeOptions"></mat-paginator>
+                </div>
+                </div>
+
+      </div>  
+  
+    </body>
+

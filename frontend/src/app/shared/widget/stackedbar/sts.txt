@@ -1,0 +1,178 @@
+import { Component, OnInit } from '@angular/core';
+import * as Highcharts from 'highcharts';
+
+@Component({
+  selector: 'app-widget-stackedbar',
+  templateUrl: './stackedbar.component.html',
+  styleUrls: ['./stackedbar.component.scss']
+})
+export class StackedbarComponent implements OnInit {
+  chartOptions: any = {}; // Declare chartOptions property
+  Highcharts = Highcharts;
+
+  ngOnInit() {
+    const btnHTML =
+      '<button id="2020">1 Min</button> <button id="2016">1 Hour</button> <button id="2012">1 Day</button> <button id="2008">10 Days</button> <button id="2004">1 Month</button> <button id="2000">1 Year</button>';
+
+    const containerDiv = document.getElementById('container');
+    if (containerDiv) {
+      containerDiv.insertAdjacentHTML('beforebegin', btnHTML);
+    }
+
+    const totalFiles: { [year: number]: [string, number][] } = {
+      2020: [['EML', 9], ['BMP', 12], ['JPEG', 8], ['DOCM', 17], ['PNG', 19], ['PDF', 26], ['DOC', 27], ['DOCX', 46], ['TIFF', 22]],
+      2016: [['EML', 13], ['BMP', 7], ['JPEG', 8], ['DOCM', 11], ['PNG', 20], ['PDF', 38], ['DOC', 29], ['DOCX', 47], ['TIFF', 32]],
+      2012: [['EML', 13], ['BMP', 9], ['JPEG', 14], ['DOCM', 16], ['PNG', 24], ['PDF', 48], ['DOC', 19], ['DOCX', 36], ['TIFF', 42]],
+      2008: [['EML', 13], ['BMP', 9], ['JPEG', 14], ['DOCM', 16], ['PNG', 24], ['PDF', 48], ['DOC', 19], ['DOCX', 36], ['TIFF', 27]],
+      2004: [['EML', 9], ['BMP', 17], ['JPEG', 18], ['DOCM', 13], ['PNG', 29], ['PDF', 33], ['DOC', 9], ['DOCX', 37], ['TIFF', 34]],
+      2000: [['EML', 8], ['BMP', 5], ['JPEG', 16], ['DOCM', 13], ['PNG', 32], ['PDF', 28], ['DOC', 11], ['DOCX', 37], ['TIFF', 45]]
+    };
+
+    const data: { [year: number]: [string, number][] } = {
+      2020: [['EML', 6], ['BMP', 27], ['JPEG', 17], ['DOCM', 10], ['PNG', 20], ['PDF', 38], ['DOC', 22], ['DOCX', 39], ['TIFF', 32]],
+      2016: [['EML', 9], ['BMP', 12], ['JPEG', 8], ['DOCM', 17], ['PNG', 19], ['PDF', 26], ['DOC', 27], ['DOCX', 46], ['TIFF', 27]],
+      2012: [['EML', 13], ['BMP', 7], ['JPEG', 8], ['DOCM', 11], ['PNG', 20], ['PDF', 38], ['DOC', 29], ['DOCX', 47], ['TIFF', 42]],
+      2008: [['EML', 8], ['BMP', 6], ['JPEG', 8], ['DOCM', 12], ['PNG', 14], ['PDF', 28], ['DOC', 27], ['DOCX', 26], ['TIFF', 29]],
+      2004: [['EML', 6], ['BMP', 7], ['JPEG', 11], ['DOCM', 8], ['PNG', 19], ['PDF', 21], ['DOC', 29], ['DOCX', 27], ['TIFF', 37]],
+      2000: [['EML', 4], ['BMP', 3], ['JPEG', 12], ['DOCM', 7], ['PNG', 22], ['PDF', 16], ['DOC', 31], ['DOCX', 29], ['TIFF', 48]]
+    };
+
+    const filetypes: { [key: string]: { name: string; color: string; ucCode: string } } = {
+      EML: { name: 'EML', color: '#FE2371', ucCode: 'EML' },
+      BMP: { name: 'BMP', color: '#544FC5', ucCode: 'BMP' },
+      JPEG: { name: 'JPEG', color: '#2CAFFE', ucCode: 'JPEG' },
+      DOCM: { name: 'DOCM', color: '#FE6A35', ucCode: 'DOCM' },
+      PNG: { name: 'PNG', color: '#6B8ABC', ucCode: 'PNG' },
+      PDF: { name: 'PDF', color: '#1C74BD', ucCode: 'PDF' },
+      DOC: { name: 'DOC', color: '#00A6A6', ucCode: 'DOC' },
+      DOCX: { name: 'DOCX', color: '#D568FB', ucCode: 'DOCX' },
+      TIFF: { name: 'TIFF', color: '#D562FB', ucCode: 'TIFF' }
+    };
+
+    // Add upper case country code
+    for (const [key, value] of Object.entries(filetypes)) {
+      value.ucCode = key.toUpperCase();
+    }
+
+    const getData = (data: [string, number][]) =>
+      data.map(point => ({
+        name: point[0],
+        y: point[1],
+        color: filetypes[point[0]].color
+      }));
+
+    this.chartOptions = {
+      chart: {
+        type: 'column'
+      },
+      filetypes,
+      title: {
+        text: 'Files Processed In Time Intervals',
+        align: 'left'
+      },
+      subtitle: {
+        text: 'Choose the Interval from above',
+        align: 'left'
+      },
+      plotOptions: {
+        series: {
+          grouping: false,
+          borderWidth: 0
+        }
+      },
+      legend: {
+        enabled: false
+      },
+      tooltip: {
+        shared: true,
+        pointFormat: '<span style="color:{point.color}">\u25CF</span> ' +
+          '{series.name}: <b>{point.y} files</b><br/>'
+      },
+      xAxis: {
+        type: 'category',
+        accessibility: {
+          description: 'File types'
+        },
+        max: 4,
+        labels: {
+          useHTML: true,
+          animate: true,
+          format: '{chart.options.filetypes[value].ucCode}<br>' +
+            '<span class="f32"><span class="flag {value}"></span></span>',
+          style: {
+            textAlign: 'center'
+          },
+          formatter: function (this: Highcharts.AxisLabelsFormatterContextObject) {
+            return (this as any).chart.options.filetypes[this.value].ucCode + '<br>' +
+              '<span class="f32"><span class="flag ' + this.value + '"></span></span>';
+          }
+        }
+      },
+      
+      yAxis: [{
+        title: {
+          text: 'Number of Files'
+        },
+        showFirstLabel: false
+      }],
+      series: [{
+        color: '#CCD1D1',
+        pointPlacement: -0.2,
+        linkedTo: 'main',
+        data: totalFiles[2020].slice(),
+        name: '2016'
+      }, {
+        name: '2020',
+        id: 'main',
+        dataSorting: {
+          enabled: true,
+          matchByName: true
+        },
+        dataLabels: [{
+          enabled: true,
+          inside: true,
+          style: {
+            fontSize: '16px'
+          }
+        }],
+        data: getData(data[2020] as [string, number][]).slice()
+      }],
+      exporting: {
+        allowHTML: true
+      }
+    };
+
+    const years = Object.keys(totalFiles);
+
+    years.forEach(year => {
+      const btn = document.getElementById(year);
+
+      if (btn) {
+        btn.addEventListener('click', () => {
+          const activeButtons = document.querySelectorAll('.buttons button.active');
+          activeButtons.forEach(active => active.classList.remove('active'));
+
+          btn.classList.add('active');
+
+          const chart = Highcharts.charts[0];
+          if (chart) {
+            chart.setTitle({
+              text: 'Files processed in ' + year
+            });
+
+            chart.series[0].update({
+              name: (parseInt(year) - 4).toString(),
+              data: getData(totalFiles[parseInt(year)] as [string, number][]).slice()
+            } as Highcharts.SeriesOptionsType);
+            
+            chart.series[1].update({
+              name: year,
+              data: getData(data[parseInt(year)] as [string, number][]).slice()
+            } as Highcharts.SeriesOptionsType);
+            
+          }
+        });
+      }
+    });
+  }
+}

@@ -1,0 +1,86 @@
+/* Add the following CSS code to your existing style.css file or create a new one */
+
+.mat-elevation-z8 {
+    background-color: #ccc; /* Grey background color */
+    color: #000; /* Text color */
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #000; /* Black border */
+  }
+  .table-boundaries {
+    border: 2px solid #000;
+  }
+  
+  .table-boundaries th,
+  .table-boundaries td {
+    border: 1px solid #ccc;
+    padding: 8px;
+  }
+  
+  .table-boundaries th {
+    // background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+  position: sticky;
+  top: 0;
+  background-color: #39bbd2; /* Header background color */
+  color: #ffffff; /* Header text color */
+  font-weight: bold;
+  z-index: 1; /* Ensures the sticky header appears above other elements */
+}
+
+  
+  td {
+    background-color: #363439; /* Header background color */
+    color: #fffafa; /* Header text color */
+    font-weight: bold;
+  }
+  
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2; /* Alternate row background color */
+  }
+  
+  tr {
+    background-color: rgb(60, 72, 200); 
+    color: #fff; 
+    
+  }
+  
+  
+  .mat-paginator {
+    background-color: #333; /* Paginator background color */
+    color: #fff; /* Paginator text color */
+  }
+  
+  .mat-paginator-page-size-label {
+    color: #fff; /* Paginator page size label text color */
+  }
+  
+  .mat-paginator-range-label {
+    color: #fff; /* Paginator range label text color */
+  }
+  
+  .mat-paginator-navigation-button {
+    color: #fff; /* Paginator navigation button color */
+  }
+  
+  .mat-paginator-navigation-button:not(:disabled):hover {
+    background-color: #555; /* Paginator navigation button hover background color */
+  }
+  
+  .mat-paginator-navigation-button-disabled {
+    color: #999; /* Paginator disabled navigation button color */
+  }
+  

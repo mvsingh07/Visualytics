@@ -1,0 +1,11 @@
+<div class="iocurl-container">
+  <h2>IOCURL Data</h2>
+  <ul>
+    <li *ngFor="let url of paginatedIocurl" class="iocurl-item">{{ url }}</li>
+  </ul>
+  <mat-paginator [length]="iocurl.length"
+                 [pageSize]="pageSize"
+                 [pageSizeOptions]="[10, 15, 20]"
+                 (page)="handlePageEvent($event)">
+  </mat-paginator>
+</div>

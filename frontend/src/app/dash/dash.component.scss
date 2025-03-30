@@ -1,0 +1,20 @@
+/* src/app/dropdown/dropdown.component.scss */
+mat-form-field {
+    width: 30%;
+  }
+  
+  mat-select {
+    font-size: 16px;
+  }
+  
+  mat-icon {
+    // margin-right: 8px;
+    font-size: 24px;
+  }
+  
+
+  /* your-component.component.scss */
+::ng-deep .custom-mat-label .mat-form-field-label {
+    width: 10px; /* Adjust the width as needed */
+  }
+  

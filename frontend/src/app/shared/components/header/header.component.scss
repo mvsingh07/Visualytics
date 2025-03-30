@@ -1,0 +1,148 @@
+ul li{
+  list-style:none;
+}
+
+// .mat-toolbar{
+//   background-color:rgb(31, 67, 122);
+//   color:white;
+//   font-family: 'DM Sans',sans-serif;
+//   font-size: x-large;
+//   // font-weight:normal
+// }
+
+
+.mat-toolbar{
+  // background-color:#006666;
+  // background-color: #264d59;
+  color:#283041;
+  background-color: white;
+  // border-radius: 4px;
+  border-top: 1px solid #1a3344;
+  border-bottom:1px solid  #1a3344;
+  // border:1px solid #1a3344;
+  // color:white;
+  font-family: 'DM Sans',sans-serif;
+  font-size: large;
+  font-weight: bold;
+}
+
+
+.dark-mode{
+  background-color: #1a3344;
+  color:white;
+  // border-top: 1px solid #ffffff;
+  // border-bottom:1px solid  #ffffff;
+
+}
+
+.rotate-once {
+  animation: spin-small 0.3s ease-in-out;
+}
+
+@keyframes spin-small {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg); /* Change this to 45deg if you want a smaller rotation */
+  }
+}
+
+
+
+span{
+  margin-left: 25px;
+}
+
+
+/* header.component.css (or your custom CSS file) */
+.logout-button {
+  font-size: 15px; /* Change this value to adjust the font size as per your requirement */
+}
+
+
+.icon-list {
+  display: flex;
+  align-items: center; /* Vertically center the icons */
+}
+
+.icon-button {
+  padding: 0; /* Remove default button padding */
+}
+
+/* Add your styles here */
+li {
+  list-style-type: none;
+}
+
+.mat-icon {
+  margin-right: 8px; /* Adjust the spacing between the icon and text */
+}
+
+button.mat-button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  padding: 12px;
+}
+
+button.mat-button:hover {
+  background-color: #f0f0f0; /* Change the hover background color */
+}
+
+.mat-menu-content {
+  min-width: 250px; /* Adjust the minimum width of the dropdown menu */
+  padding: 12px; /* Add padding to the dropdown menu */
+  background-color: #ffffff; /* Set the background color for the dropdown menu */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+.welcome-text {
+  width: 100%;
+  cursor: pointer;
+}
+
+.button-text {
+  display: flex;
+  padding-right: 100px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 10px;
+  text-align: center;
+  width: 100%;
+
+}
+
+.logout-button {
+  display: flex;
+  text-align: left;
+  width: 100%;
+  color:white;
+  border-radius: 15px;
+  text-decoration-color: #ffffff;
+  background-color: #283041;
+}
+.logout-button:hover {
+  display: flex;
+
+  text-align: left;
+  width: 100%;
+
+  text-decoration-color: #ffffff;
+  background-color: rgb(35, 73, 153)
+}
+
+.logText{
+  color: #ffffff;
+}
+
+
+.logOut{
+  color: white;
+}
+
+
+.logOut:hover{
+  color: white;
+}

@@ -1,0 +1,18 @@
+<!-- src/app/dropdown/dropdown.component.html -->
+<mat-form-field class="custom-mat-label">
+  <button mat-icon-button (click)="toggleMenu()">
+    <mat-icon>settings</mat-icon>
+  </button>
+  <mat-select>
+    <mat-option>
+      <button mat-icon-button (click)="toggleDarkMode()">
+        <mat-icon>dark_mode</mat-icon>
+        Dark Mode
+      </button>
+    </mat-option>
+    <mat-option>
+      <mat-icon>edit</mat-icon>
+      Edit Profile
+    </mat-option>
+  </mat-select>
+</mat-form-field>

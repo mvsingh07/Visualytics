@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.icon-bar {
+  width: 90px;
+  background-color: #555;
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 36px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #04AA6D;
+  color: black;
+}
+</style>
+</head>
+<body>
+
+<div class="icon-bar">
+  <a id="home" class="active" href="#"><i class="fa fa-home active"></i></a> 
+  <a id="search" href="#"><i class="fa fa-search"></i></a> 
+  <a id="envelope" href="#"><i class="fa fa-envelope"></i></a> 
+  <a id="globe" href="#"><i class="fa fa-globe"></i></a>
+  <a id="trash" href="#"><i class="fa fa-trash"></i></a> 
+</div>
+
+<script>
+// JavaScript to toggle active state dynamically
+document.addEventListener('DOMContentLoaded', function () {
+  const iconBar = document.querySelector('.icon-bar');
+  const links = iconBar.querySelectorAll('a');
+
+  links.forEach(function (link) {
+    link.addEventListener('click', function () {
+      // Remove active class from all links
+      links.forEach(function (otherLink) {
+        otherLink.classList.remove('active');
+      });
+
+      // Add active class to the clicked link
+      link.classList.add('active');
+    });
+  });
+});
+</script>
+
+</body>
+</html>

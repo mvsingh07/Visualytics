@@ -1,0 +1,132 @@
+
+/* styles.css */
+
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:white;
+}
+
+.container {
+  width: 500px;
+}
+
+.form-container {
+
+  border: 1px solid #141414;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-right:30px;
+  margin-left: 1px;
+  width: auto; 
+  //background-color: rgb(175, 173, 173);
+  background-color :#C5D0DA; 
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #050505;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container label {
+  margin-bottom: 5px;
+  color: #0e0d0d;
+  font-weight: 500;
+}
+
+.form-container input {
+  padding: 10px;
+  border: 1px solid #030303;
+  border-radius: 3px;
+  margin-bottom: 15px;
+  color:#030303;
+  width:a;
+  
+}
+
+.form-container button {
+  padding: 12px;
+  background-color: rgb(2, 1, 77);;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  
+}
+
+.form-container button[disabled] {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.form-container .error-message {
+  color: #e53935;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+
+html{
+  // Correct relative path to image1.jpg from homepage.component.scss
+//background-image: url('/assets/wallpaper.jpeg');
+
+background-size: 100% 100%;
+background-position: center;
+background-repeat: no-repeat;
+
+/* Set other styles for the component */
+color: white;
+padding: 20px; 
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(7, 7, 7);
+}
+
+/* Additional styles to adjust the layout */
+.form-container {
+  position: relative;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Hide scrollbars */
+}
+h3{
+    color:black
+}
+.wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// .custom-toast {
+//   background-color:  rgb(31, 67, 122); /* Yellow background color */
+//   color: #fff; /* Text color */
+//   /* Add any other desired styles */
+// }
+
+// .toast-success {
+//   background-color: rgb(31, 67, 122) !important;
+// }

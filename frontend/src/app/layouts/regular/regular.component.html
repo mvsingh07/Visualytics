@@ -1,0 +1,35 @@
+<body>
+    <div class="header-container">
+        <app-header (toggleSideBarForMe)="sideBarToggler($event)"></app-header>
+    </div>
+    
+     <div class="sidebarContainer">
+    <!-- <div class="sidebar">  -->
+    <div class=fixedSidebar>
+        <app-sidebar (toggleSideBarForMe)="onToggleSidebar($event)"></app-sidebar>
+    </div>
+    
+    <mat-drawer-container >
+    
+       <mat-drawer mode="side" [opened]="sideBarOpen">
+       
+        <app-extension (toggleSideBarForMe)="onToggleSidebar($event)"></app-extension>
+       </mat-drawer> 
+    
+       
+    </mat-drawer-container>
+<!-- </div> -->
+    <div class="content-container">
+        <router-outlet></router-outlet>
+  </div>
+    </div>
+
+
+
+
+
+    
+    <div class="footer-container">
+        <app-footer></app-footer>
+    </div>
+    </body>

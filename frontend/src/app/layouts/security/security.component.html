@@ -1,0 +1,44 @@
+ <!-- <body>
+
+        <div class="header-container">
+            <app-header></app-header>
+        </div>
+    
+        <div class="content-container">
+            <router-outlet></router-outlet>
+        </div>
+        
+        <div class="footer-container">
+            <app-footer></app-footer>
+        </div>
+
+    </body>  -->
+
+     <body>
+        <div class="sidebarContainer">
+    
+            <div class=fixedSidebar>
+                <app-adminsidebar (toggleSideBarForMe)="onToggleSidebar($event)"></app-adminsidebar>
+            </div>
+            
+            <mat-drawer-container >
+            
+               <mat-drawer mode="side" [opened]="sideBarOpen">
+               
+                <app-extensionadmin (toggleSideBarForMe)="onToggleSidebar($event)"></app-extensionadmin>
+               </mat-drawer> 
+            
+                    <div class="header-container">
+                    <app-headeradmin (toggleSideBarForMe)="sideBarToggler($event)"></app-headeradmin>
+                   </div>
+    
+                  <router-outlet></router-outlet>
+    
+            <div class="footer-container">
+                <app-footer></app-footer>
+            </div>
+    
+            </mat-drawer-container>
+    
+            </div>
+    </body>  

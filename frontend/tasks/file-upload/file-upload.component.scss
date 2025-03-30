@@ -1,0 +1,164 @@
+// body {
+//     font-family: Arial, sans-serif;
+//     background-color: aliceblue;
+//     // margin: 0;
+//     // padding: 0;
+//     // // border: #0056b3;
+//     // border-style: solid;
+//   }
+  
+//  .heading4{
+//   text-align: center;
+//   font-weight: 200;
+//   padding:10px;
+//   background-color:rgb(31, 67, 122);
+//   color:white;
+//   font-family: 'DM Sans',sans-serif;
+//   font-size: x-large;
+//  }
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    // height: 75%;
+    flex-direction: column;
+    text-align: center;
+    // width: 1800px;
+  }
+  
+//   .list-section{
+//     background-color: #fff;
+//     // border: 1px solid #ccc;
+//     // border-radius: 5px;
+//     padding: 20px;
+//     text-align: center;
+//     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+//     width: 300px;
+.upload-section {
+  border: 1px solid #ddd;
+  padding: 20px;
+  
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  text-align: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.title{
+  margin-top: 70px;
+
+}
+
+.subtitle{
+  margin-top: 30px;
+}
+h2 {
+  color: #0c476e;
+  font-size: 50px;
+  align-items: center;
+ 
+}
+h3 {
+  color: #2772a5;
+  font-size: 30px;
+  align-items: center;
+
+}
+.header-image {
+  width: 300px; /* Adjust the width as needed */
+  margin-bottom: 20px;
+}
+form {
+  margin-top: 10px;
+  width: 300px;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.folder-input-label {
+  display: inline-block;
+  
+  font-size: larger;
+  font-weight: bold;
+  padding: 20px 30px; 
+  background-color: #0c476e;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 5px;
+  
+  border-radius: 15px;
+}
+
+.folder-input-label:hover {
+  background-color: #0056b3;
+ }
+ .file-input-label {
+  display: inline-block;
+  
+  font-size: larger;
+  font-weight: bold;
+  padding: 20px 30px; 
+  background-color: #0c476e;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 5px;
+  margin-top: 25px;
+  border-radius: 15px;
+}
+mat-icon {
+  margin-right: 10px;
+  font-size:x-large;
+  
+  // 
+}
+
+span {
+  display: block;
+  margin-top: 10px;
+  color: #555;
+}
+
+//   h2 {
+//     font-size: 20px;
+//     margin-bottom: 15px;
+//   }
+  
+//   input[type="file"] {
+//     margin-bottom: 10px;
+//   }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 20px 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 200px;
+    transition: background-color 0.3s;
+    font-size: larger;
+    font-weight: bold;
+  }
+  button[disabled] {
+    cursor:wait; /* Change cursor to indicate not allowed */
+  
+    color: #a3a0a0;
+    /* You can add more styling as needed */
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+
+.text{
+  font-weight: bolder;
+}
+
+
+.text1{
+    display: inline; 
+}

@@ -1,0 +1,62 @@
+
+      <table>
+        <tr>
+          <th>FILE_TYPE</th>
+          <th>Files Count</th>
+          <th>FILE_SIZE (MB)</th>
+        </tr>
+    
+        <tr>
+          <td>BML</td>
+          <td>475</td>
+          <td>1957.58</td>
+        </tr>
+      
+        <tr>
+          <td>JPG</td>
+          <td>495</td>
+          <td>1072.73</td>
+        </tr>
+      
+        <tr>
+          <td>EML</td>
+          <td>150</td>
+          <td>264.69</td>
+        </tr>
+      
+        <tr>
+          <td>PNG</td>
+          <td>815</td>
+          <td>2139.50</td>
+        </tr>
+      
+        <tr>
+          <td>PDF</td>
+          <td>230</td>
+          <td>407.79</td>
+        </tr>
+      
+        <tr>
+          <td>TIFF</td>
+          <td>595</td>
+          <td>1085.33</td>
+        </tr>
+      
+        <tr>
+          <td>DOCM</td>
+          <td>715</td>
+          <td>1043.63</td>
+        </tr>
+      
+        <tr>
+          <td>DOC</td>
+          <td>975</td>
+          <td>1514.74</td>
+        </tr>
+      
+        <tr>
+          <td>DOCX</td>
+          <td>570</td>
+          <td>733.94</td>
+        </tr>
+      </table>

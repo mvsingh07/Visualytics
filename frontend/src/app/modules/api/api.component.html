@@ -1,0 +1,24 @@
+<div class="api-list-container">
+    <h2>API LISTENING</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>API Name</th>
+          <th>URL</th>
+          <th>Description</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let api of apis">
+          <td>{{ api.name }}</td>
+          <td><a [href]="api.url" target="_blank">{{ api.url }}</a></td>
+          <td>{{ api.description }}</td>
+          <td [ngClass]="{'status-operational': api.status === 'Operational', 'status-down': api.status === 'Down'}">
+            {{ api.status }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
